@@ -324,23 +324,29 @@ template {
   font-size: 0.93rem; }
   .button:hover {
     cursor: pointer; }
+  .button--primary--header {
+    padding: 11px 24px;
+    background-color: #E3B873;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
+    .button--primary--header:hover {
+      box-shadow: none; }
+  .button--primary--big {
+    padding: 18px 30px;
+    background-color: #E3B873;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
+    .button--primary--big:hover {
+      box-shadow: none; }
+  .button--outline--big {
+    padding: 17px 48px;
+    margin-left: 1rem;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff; }
 
-/*   .hero
-    &__button
-      .button
-        &--primary
-          padding: 17px 30px
-          background-color: $primary
-          color: $light
-          box-shadow: 0px 5px 15px rgba($primary, 0.2)
-          transition: box-shadow 0.3s
-          &:hover
-            box-shadow: none
-        &--outline
-          padding: 17px 50px
-          border: 1px solid $light
-          background-color: transparent
-          color: $light */
 .container {
   width: 85%;
   max-width: 1256px;
@@ -405,9 +411,6 @@ body {
 .contacts__phone {
   margin-right: 45px; }
 
-.contacts__button {
-  padding: 11px 24px; }
-
 .hero {
   position: relative;
   display: flex;
@@ -435,18 +438,7 @@ body {
     max-width: 500px;
     line-height: 1.4;
     margin: 0;
-    margin-bottom: 3rem; }
-  .hero--primary {
-    padding: 17px 30px;
-    background-color: #E3B873;
-    color: #fff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s; }
-  .hero--outline {
-    padding: 17px 50px;
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff; }
+    margin-bottom: 3.2rem; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -512,20 +504,34 @@ body {
   .nav__item {
     margin-right: 1rem; } }
 
-/* @media screen and ( min-width: 1200px )
-  html
-    font-size: 14px
-  .menu
-    &__logo
-      margin-right: 2.14rem
-  .nav
-    &__item
-      margin-right: 0.7rem
-  .contacts
-    &__phone
-      margin-left: 2.14rem
-    &__button
-      margin-left: 2.14rem */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  html {
+    font-size: 14px; }
+  .menu__logo {
+    margin-right: 2.14rem; }
+  .nav__item {
+    margin-right: 0.7rem; }
+  .contacts__phone {
+    margin-left: 2.14rem; }
+  .contacts__button {
+    margin-left: 2.14rem; }
+  .hero__button {
+    margin-right: 2rem; } }
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 17px; }
+  .menu__logo {
+    margin-right: 2.14rem; }
+  .nav__item {
+    margin-right: 0.7rem; }
+  .contacts__phone {
+    margin-left: 2.14rem; }
+  .contacts__button {
+    margin-left: 2.14rem; }
+  .hero__button {
+    margin-right: 2rem; } }
+
 @media screen and (max-width: 992px) {
   .nav {
     display: none; }
@@ -553,8 +559,13 @@ body {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem;
+    margin-left: 0; } }
 
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 540px) {
+  .hero__scroll-down {
+    display: none; } }
+
+@media screen and (min-width: 1200px) and (max-height: 610px) {
   .hero__scroll-down {
     display: none; } }
