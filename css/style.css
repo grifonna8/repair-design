@@ -723,6 +723,18 @@ img {
   .section-title__description {
     color: #363636; } }
 
+@media screen and (min-width: 885px) and (max-width: 950px) {
+  .card__text--types {
+    height: 280px; } }
+
+@media screen and (max-width: 884px) {
+  .card__text--types {
+    max-height: 290px; } }
+
+@media screen and (min-width: 761px) and (max-width: 795px) {
+  .card__pricetag {
+    padding: 0.9rem 2.2rem; } }
+
 @media screen and (max-width: 760px) {
   .row {
     flex-direction: column;
