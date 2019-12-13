@@ -24,3 +24,4 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 });
+
