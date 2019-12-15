@@ -354,6 +354,20 @@ template {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+  .button--up {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    height: 1.785rem;
+    width: 5.714rem;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s;
+    background-color: #E3B873;
+    cursor: pointer; }
 
 .label--light {
   color: rgba(255, 255, 255, 0.5);
@@ -743,6 +757,10 @@ img {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
+
+.swiper-container {
+  width: 600px;
+  height: 300px; }
 
 @media screen and (max-width: 1264px) {
   html {
