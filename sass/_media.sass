@@ -30,11 +30,19 @@
     &__text
       &--types
         max-height: 290px
+  .swiper
+    &-slider
+      &-image
+        margin-top: 0
 
 @media screen and (min-width: 761px) and (max-width: 795px)
   .card
     &__pricetag
       padding: 0.9rem 2.2rem
+  .swiper
+    &-slider
+      &-image
+        margin-top: 0
 
 @media screen and ( max-width: 760px )
   .row
@@ -52,6 +60,39 @@
       color: $light
     &__card
       margin-bottom: 5rem
+  .swiper
+    &-slider
+      &-image
+        margin-top: 0
+        margin-bottom: 18px
+    &-slide
+      &__value
+        font-size: 14px
+        line-height: 135.8%
+      &__heading
+        font-size: 1rem
+        margin-bottom: 0.785rem  
+  .mobile
+    &-order
+      &-top
+        order: -1
+  .col-50
+    width: 100%
+  .section
+    &-title
+      text-align: center
+      &--left
+        text-align: center    
+      &__text
+        text-align: center
+        margin: auto
+        margin-bottom: 36px
+        margin-top: 22px
+      &__word
+        justify-content: center
+        &::after
+          display: none
+      
 
 @media screen and ( max-width: 570px )
   .section
