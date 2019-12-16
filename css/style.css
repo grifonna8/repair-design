@@ -441,9 +441,11 @@ img {
       text-align: left; }
     .section-title__heading {
       font-family: 'Yeseva One', cursive;
+      font-weight: normal;
       text-transform: uppercase;
       letter-spacing: -0.06rem;
-      line-height: 138%; }
+      line-height: 147%;
+      font-size: 1.85rem; }
       .section-title__heading--primary {
         color: #E3B873; }
     .section-title__word {
@@ -454,11 +456,11 @@ img {
         width: 92px;
         height: 1px;
         background-color: #E3B873;
-        margin-left: 2rem; }
+        margin-left: 2.4rem; }
     .section-title__text {
-      font-size: 1.28rem;
-      line-height: 2.07rem;
-      max-width: 31.57rem; }
+      font-size: 1.285rem;
+      line-height: 1.98rem;
+      max-width: 35rem; }
     .section-title__image {
       display: flex;
       align-items: center;
@@ -476,6 +478,10 @@ img {
       line-height: 142%;
       max-width: 53rem;
       letter-spacing: 0.03rem; }
+
+.smth {
+  background-color: transparent;
+  height: 6.8rem; }
 
 .header {
   position: fixed;
@@ -758,6 +764,14 @@ img {
   .modal__button {
     align-self: flex-end; }
 
+.block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 27.142rem;
+  margin-top: 1.01rem;
+  margin-bottom: 0.39rem; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
@@ -766,24 +780,26 @@ img {
   .swiper-slide__value {
     display: flex;
     flex-wrap: wrap;
-    max-width: 11.4rem;
+    max-width: 9rem;
     font-family: 'Futura Book', sans-serif;
-    font-size: 1.07rem;
-    line-height: 1.428rem; }
+    font-size: 1.08rem;
+    line-height: 1.428rem;
+    margin-top: -0.9rem;
+    margin-bottom: -0.3rem; }
   .swiper-slide__text {
     flex-basis: 50%;
-    margin-bottom: 2.42rem;
-    padding-bottom: 2rem; }
+    margin-bottom: 0.4rem; }
   .swiper-slide__heading {
     font-size: 1.285rem;
     line-height: 1.78rem;
     font-family: 'Yeseva One', cursive;
     color: #E3B873;
-    text-transform: uppercase;
-    margin-bottom: 0.64rem; }
+    text-transform: uppercase; }
 
 .swiper-pagination-bullet {
-  background-color: rgba(255, 255, 255, 0.3); }
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 10px;
+  height: 10px; }
   .swiper-pagination-bullet-active {
     background-color: #fff; }
 
@@ -809,6 +825,9 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: 0; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px; }
 
 @media screen and (max-width: 1264px) {
   html {
