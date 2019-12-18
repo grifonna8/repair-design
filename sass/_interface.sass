@@ -58,12 +58,14 @@
 .input
   background-color: transparent
   border: none
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+  border-bottom: 1px solid rgba(54, 54, 54, 0.5)
   font-size: 1.285rem
-  color: $light
+  color: $blacky
   padding: 0.5rem 0
-  &::placeholder
+  &--light
     color: $light
+    &::placeholder
+      color: $light
 .policy
   &__checkbox
     opacity: 0
@@ -75,6 +77,7 @@
   &__label
     display: flex
     align-items: center
+    color: #181818
     &::before
       content: ''
       width: 18px
@@ -83,3 +86,16 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
+.control
+  &__button
+    padding: 11px 60px
+    background-color: $primary
+    color: $light
+    box-shadow: 0px 5px 15px rgba($primary, 0.2)
+    transition: box-shadow 0.3s
+    font-size: 1.07rem
+  &__label
+    color: rgba(54, 54, 54, 0.5)
+  &__input
+    &::placeholder
+      color: $blacky

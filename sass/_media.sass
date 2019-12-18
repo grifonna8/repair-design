@@ -78,7 +78,7 @@
         order: -1
   .col-50
     width: 100%
-  .section
+  .section 
     &-title
       text-align: center
       &--left
@@ -91,8 +91,36 @@
       &__word
         justify-content: center
         &::after
-          display: none
-      
+          display: none 
+  .control
+    background-color: $dark
+    padding-bottom: 0
+    &__text
+      color: $light
+      max-width: 48.4rem
+      font-size: 1rem
+      line-height: 1.71rem
+    &__form
+      flex-direction: column
+    &__label
+      color: rgba($light, 0.5)
+    &__input
+      color: $light
+      &-group
+        &:first-of-type
+          margin-bottom: 4.5rem
+      &::placeholder
+        color: $light
+    &__button
+      order: 1
+      margin-bottom: -1.9rem
+      padding: 1.42rem 8.85rem
+    &__policy
+      &-label
+        color: $light
+        font-size: 1.14rem 
+        justify-content: flex-start
+        margin-bottom: 4.42rem
 
 @media screen and ( max-width: 570px )
   .section
@@ -121,6 +149,19 @@
       min-width: 22.86rem
       margin-bottom: 1.85rem
       margin-left: 0  
+  .control
+    background-color: $dark
+    &__video
+      background: url('../img/video-mask-adaptive.png') center no-repeat
+      max-width: 24.28rem
+      min-height: 14.785rem
+    .video
+      &__play
+        max-width: 5.284rem
+        max-height: 5.284rem
+
+    
+      
 
 @media screen and ( max-height: 540px )
   .hero
