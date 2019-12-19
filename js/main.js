@@ -84,5 +84,93 @@ $(document).ready(function () {
     }
   });
 
+  // валидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+   }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+    }
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+    }
+  });
+  /* маска для телефона */
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+
 });
 

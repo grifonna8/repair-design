@@ -73,11 +73,12 @@
     &:checked +
       .policy__label
         &::before
-          background: $primary url('../img/check.svg') no-repeat center / 0.8rem 
+          background: $primary url('../img/check.svg') no-repeat center / 0.8rem
   &__label
     display: flex
     align-items: center
-    color: #181818
+    color: $black
+    font-size: 1.142rem
     &::before
       content: ''
       width: 18px
@@ -86,6 +87,10 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
+    &--center
+      justify-content: center
+    &--light
+      color: $light
 .control
   &__button
     padding: 11px 60px
@@ -99,3 +104,10 @@
   &__input
     &::placeholder
       color: $blacky
+div
+  &.invalid
+    color: tomato
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+
