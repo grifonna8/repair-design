@@ -321,7 +321,8 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  outline: none; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -461,7 +462,7 @@ img {
 .section {
   padding: 60px 0; }
   .section--dark {
-    background-color: #131313;
+    background: #131313;
     color: #fff; }
   .section-title {
     text-align: center; }
@@ -923,6 +924,46 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    min-height: 465px; }
+  .footer__contacts-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .footer__contacts {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.64rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.42rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #E3B873;
+    max-width: 42.07rem; }
+
+.contacts-wrap__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem; }
+
+.contacts-wrap__message-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E3B873;
+  padding: 3px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin-left: 15px; }
+
+.contacts-wrap__instagram {
+  background: transparent; }
 
 .modal {
   opacity: 0;
@@ -957,7 +998,8 @@ img {
     background: transparent url("../img/close.svg") no-repeat center;
     border: none;
     margin: 12px;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none; }
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
@@ -1104,8 +1146,17 @@ img {
     .footer__input-group {
       flex-basis: 100%; }
     .footer__button {
-      padding: 1.42rem 11rem;
-      font-size: 1.07rem; }
+      width: 100%;
+      font-size: 1.07rem;
+      min-width: 17.85rem;
+      text-align: center; }
+    .footer__container {
+      display: flex;
+      flex-direction: column; }
+    .footer__contacts-wrap {
+      order: 5; }
+    .footer__menu {
+      display: none; }
   .policy__label {
     justify-content: flex-start; } }
 

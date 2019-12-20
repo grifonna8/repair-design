@@ -42,8 +42,8 @@
         <div class="hero__content">
           <h1 class="title hero__title animated fadeInUp slow">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
           <p class="hero__text animated fadeInUp slow">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary button--primary--big animated fadeInUp slow">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline button--outline--big animated fadeInUp slow">Отправить заявку</button>
+          <button class="button hero__button button--primary button--primary--big animated fadeInUp slow" data-toggle='modal'>Рассчитать стоимость</button>
+          <button class="button hero__button button--outline button--outline--big animated fadeInUp slow" data-toggle='modal'>Отправить заявку</button>
         </div> <!-- /.hero__content -->
       </div> <!-- /.container -->  
       <a href="#" class="hero__scroll-down">листайте вниз</a>
@@ -447,7 +447,7 @@
     <!-- /.section design -->
   </main>
   <footer class="footer section--dark">
-    <div class="container">
+    <div class="container footer__container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="#" class="form footer__form">
@@ -480,6 +480,21 @@
           <!-- /.form footer__form -->
       </div>
       <!-- /.footer-wrap -->
+      <div class="contacts-wrap footer__contacts-wrap">
+        <div class="contacts footer__contacts">Ростов на дону, Торговый центр Plaza Прямой&nbsp;телефон +7&nbsp;(999) 768 32 99</div>
+        <!-- /.contacts -->
+        <div class="links contacts-wrap__links">
+          <a href="#" class="message-background contacts-wrap__message-background"><img src="img/message.png" alt="message-icon" class="message contacts-wrap__message"></a>
+          <a href="#" class="message-background contacts-wrap__message-background"><img src="img/instagram.png" alt="instagram-icon" class="instagram contacts-wrap__instagram"></a>
+        </div>
+        <!-- /.links contacts-wrap__links -->
+      </div>
+      <!-- /.contacts-wrap footer__contacts-wrap -->
+
+      <div class="map footer__map" id="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script>
+      </div>
+      <!-- /.map footer__map -->
     </div>
     <!-- /.container -->
     <div class="footer__menu">
@@ -548,6 +563,8 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3bbdc4bd-8351-4dd4-9883-eb24078753a4&lang=ru_RU" type="text/javascript">
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
