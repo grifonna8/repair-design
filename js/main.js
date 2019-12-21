@@ -194,7 +194,7 @@ $(document).ready(function () {
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [47.244734, 39.723227],
-            zoom: 17
+            zoom: 17,
         }, {
             searchControlProvider: 'yandex#search'
         }),
@@ -217,10 +217,11 @@ $(document).ready(function () {
             iconImageSize: [32, 32],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
+            iconImageOffset: [-5, -38],
         });
 
     myMap.geoObjects
         .add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
   });
 });

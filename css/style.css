@@ -462,7 +462,7 @@ img {
 .section {
   padding: 60px 0; }
   .section--dark {
-    background: #131313;
+    background: #131313 url("../img/bg-lines-projects.png") center no-repeat;
     color: #fff; }
   .section-title {
     text-align: center; }
@@ -713,6 +713,9 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 8px; }
 
+.control--lines {
+  background: #fff url("../img/bg-lines-control.png") center no-repeat; }
+
 .control__section-title {
   margin-bottom: 2.214rem;
   margin-top: -30rem;
@@ -781,6 +784,9 @@ img {
 .video__play {
   position: relative;
   margin: auto; }
+
+.types--lines {
+  background: #fff url("../img/bg-lines-control.png") center no-repeat; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -986,7 +992,7 @@ img {
   .modal__dialogue {
     position: relative;
     max-width: 36.36rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    background: #131313 url("../img/bg-lines-modal.png") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem 3.5rem;
     color: #fff; }
   .modal__close {
@@ -1098,6 +1104,8 @@ img {
     order: -1; }
   .col-50 {
     width: 100%; }
+  .section--dark {
+    background: #131313; }
   .section-title {
     text-align: center; }
     .section-title--left {
