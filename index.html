@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,8 +42,8 @@
         <div class="hero__content">
           <h1 class="title hero__title animated fadeInUp slow">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
           <p class="hero__text animated fadeInUp slow">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary button--primary--big animated fadeInUp slow" data-toggle='modal' action="send.php" method="POST">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline button--outline--big animated fadeInUp slow" data-toggle='modal' action="send.php" method="POST">Отправить заявку</button>
+          <button class="button hero__button button--primary button--primary--big animated fadeInUp slow" data-toggle='modal' formaction="send.php" formmethod="POST">Рассчитать стоимость</button>
+          <button class="button hero__button button--outline button--outline--big animated fadeInUp slow" data-toggle='modal' formaction="send.php" formmethod="POST">Отправить заявку</button>
         </div> <!-- /.hero__content -->
       </div> <!-- /.container -->  
       <a href="#" class="hero__scroll-down">листайте вниз</a>
@@ -561,17 +561,16 @@
     </div>
   </div>
     
-  </div>
   <div class="button button--up">
     <span>Наверх</span>
     <img src="img/up-arrow.png" alt="">
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=3bbdc4bd-8351-4dd4-9883-eb24078753a4&lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3bbdc4bd-8351-4dd4-9883-eb24078753a4&lang=ru_RU">
   </script>
   <script src="js/main.js"></script>
 </body>
