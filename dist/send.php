@@ -1,13 +1,13 @@
 <?php
 
-$userName = $_POST['userName'];
-$userEmail = $_POST['userEmail'];
-$userPhone = $_POST['userPhone'];
-
+  $userName = $_POST['userName'];
+  $userPhone = $_POST['userPhone'];  
+  $userEmail = $_POST['userEmail'];
+  $userQuestion = $_POST['userQuestion'];
 // Load Composer's autoloader
+require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -29,11 +29,18 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
+    $mail->subject    = 'Новая заявка с сайта';
 
+    if ($userEmail == true)
+      $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его почта: ${userEmail}";
+    else if ($userQuestion == true)
+      $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его вопрос: ${userQuestion}";
+    else if ($userEmail != true && $userQuestion != true)
+      $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}";
     $mail->send();
-    header('Location: thanks.html');
+    /* header('Location: thanks.html'); */
+    echo "Форма успешно отправлена";
+
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
