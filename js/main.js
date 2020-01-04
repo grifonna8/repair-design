@@ -172,30 +172,30 @@ $(document).ready(function () {
   /* маска для телефона */
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
-  $('#control-form').submit(function(e){
-    e.preventDefault(); /* произвели отключение стандартного события отправки формы через php, теперь она не работает */
-    $.ajax({
-      type: "POST",
-      url: "send.php",
-      data: $(this).serialize(), /* слепливает все поля для data воедино в 1 строку */
-      success: function (response) { /* в сдучае успеха делает то-то */
-        console.log('Прибыли данные:' + response); /* получает response из echo в php */
-        $('#control-form')[0].reset(); /* чистит поля при отправке формы */
+  // $('#control-form').submit(function(e){
+  //   e.preventDefault(); /* произвели отключение стандартного события отправки формы через php, теперь она не работает */
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "send.php",
+  //     data: $(this).serialize(), /* слепливает все поля для data воедино в 1 строку */
+  //     success: function (response) { /* в сдучае успеха делает то-то */
+  //       console.log('Прибыли данные:' + response); /* получает response из echo в php */
+  //       $('#control-form')[0].reset(); /* чистит поля при отправке формы */
 
-        var 
-          modalSmall = $('.modal--small'),
-          closeSmallBtn = $('.modal--small__close');
-        modalSmall.toggleClass('modal--small--visible');
-        $(".modal__title").text(response);
-        closeSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal--small--visible');
-        });
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        console.error(jqXHR + " " + textStatus);
-      }
-    });
-  });
+  //       var 
+  //         modalSmall = $('.modal--small'),
+  //         closeSmallBtn = $('.modal--small__close');
+  //       modalSmall.toggleClass('modal--small--visible');
+  //       $(".modal__title").text(response);
+  //       closeSmallBtn.on('click', function () {
+  //         modalSmall.toggleClass('modal--small--visible');
+  //       });
+  //     },
+  //     error: function(jqXHR, textStatus, errorThrown) {
+  //       console.error(jqXHR + " " + textStatus);
+  //     }
+  //   });
+  // });
 
   /* создание карты */
   // Функция ymaps.ready() будет вызвана, когда

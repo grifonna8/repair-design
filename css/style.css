@@ -1037,6 +1037,42 @@ img {
   right: 0;
   text-align: center; }
 
+.section-title__description--clients {
+  margin-bottom: 2.785rem; }
+
+.card__title--clients {
+  font-size: 1.285rem;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+
+.card__top--clients {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row; }
+  .card__top--clients--image {
+    border-radius: 50%; }
+
+.card__pricetag--clients {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 4rem; }
+  .card__pricetag--clients--wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between; }
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
@@ -1302,7 +1338,10 @@ img {
   .hero__content {
     margin-left: 0; }
   .section-title__description--team {
-    color: #fff; }
+    color: #fff;
+    font-size: 1.071rem;
+    max-width: 24.28rem;
+    line-height: 135.84%; }
   .team {
     background: #131313;
     color: #fff; }
@@ -1323,6 +1362,10 @@ img {
     color: #363636; }
     .section-title__description--team {
       color: #fff; } }
+
+@media screen and (min-width: 992px) {
+  .section-title__description--team {
+    color: #363636; } }
 
 @media screen and (min-width: 869px) and (max-width: 950px) {
   .card__text--types {

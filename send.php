@@ -38,8 +38,8 @@ try {
     else if ($userEmail != true && $userQuestion != true)
       $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}";
     $mail->send();
-    /* header('Location: thanks.html'); */
-    echo "Форма успешно отправлена";
+    header('Location: thanks.html');
+/*     echo "Форма успешно отправлена"; */
 
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
