@@ -216,7 +216,7 @@ $(document).ready(function () {
    } */
 
   /* создание карты с доп настройками */
-  ymaps.ready(function () {
+  /* ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [47.244734, 39.723227],
             zoom: 17,
@@ -224,29 +224,38 @@ $(document).ready(function () {
             searchControlProvider: 'yandex#search'
         }),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
             hintContent: 'Наш офис',
             balloonContent: 'Вход со двора'
-        }, {
+        }, { */
             // Опции.
             // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
+            /* iconLayout: 'default#image', */
             // Своё изображение иконки метки.
-            iconImageHref: 'img/location.png',
+            /* iconImageHref: 'img/location.png', */
             // Размеры метки.
-            iconImageSize: [32, 32],
+            /* iconImageSize: [32, 32], */
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38],
-        });
+            /* iconImageOffset: [-5, -38],
+        }); */
 
-    myMap.geoObjects
+/*     myMap.geoObjects
         .add(myPlacemark);
         myMap.behaviors.disable('scrollZoom');
-  });
+  }); */
+
 });
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  var isIE = false || !!document.documentMode;
+
+  if (isIE) {
+      var head  = document.getElementsByTagName("head")[0];
+      var link  = document.createElement("link");
+      link.rel  = "stylesheet";
+      link.href = "css/ie.css";
+      head.appendChild(link);
+  }
+});
+

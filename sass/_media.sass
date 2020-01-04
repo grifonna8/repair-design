@@ -5,7 +5,7 @@
     &__item
       margin-right: 1rem  
 
-@media screen and ( max-width: 992px )
+@media screen and ( max-width: 991px )
   .nav
     display: none
   .hero
@@ -13,11 +13,36 @@
       display: none
     &__content
       margin-left: 0
+  .section-title
+    &__description
+      &--team
+        color: $light
+  .team
+    background: $dark
+    color: $light
+    &__text
+      display: none
+    &__icon
+      display: none
+  .card
+    &__subtitle
+      &--team
+        font-size: 1rem
+    &__pricetag
+      &--team
+        font-size: 1rem
+    &__title
+      &--team
+        color: $black
+        font-size: 0.9rem
 
 @media screen and ( min-width: 761px )
   .section-title
     &__description
       color: $blacky
+      &--team
+        color: $light
+
 
 @media screen and (min-width: 869px) and (max-width: 950px)
   .card
@@ -51,9 +76,27 @@
   .types
     &__card
       margin-bottom: 5rem
+  .team
+    &__card
+      margin-bottom: 7.92rem
+    &__icon
+      display: initial
   .card
+    &__title
+      &--team
+        font-size: 1.285rem
+    &__subtitle
+      &--team
+        font-size: 1.285rem
+    &__pricetag
+      &--team
+        font-size: 0.928rem
     &__text
       margin-left: 0
+      &--team
+        max-width: 16.64rem
+        margin-left: auto
+        padding: 1.482rem 0
   .design
     background-color: $dark
     &__section-title
@@ -146,9 +189,6 @@
   .policy
     &__label
       justify-content: flex-start
-
-
-
 
 @media screen and ( max-width: 570px )
   .section

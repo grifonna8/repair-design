@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56840248, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56840248" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -25,7 +26,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary button--primary--header" data-toggle='modal'>Заказать звонок</button>
+          <button class="button contacts__button button--primary button--primary--header" onclick="ym('56840248', 'reachGoal', 'button'); return true;" data-toggle='modal'>Заказать звонок</button>
         </div>
       </div>
       <!-- /.menu -->
@@ -190,13 +191,13 @@
         <form action="send.php" method="POST" id="control-form" class="form control__form">
           <div class="control__input-group">
             <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group">
             <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" autocomplete="off" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
-          <button class="button button--primarу control__button">Отправить</button>
+          <button class="button button--primarу control__button" type="button" onclick="ym('56840248', 'reachGoal', 'button-send'); return true;">Отправить</button>
           <div class="policy control__policy">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
             <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
@@ -446,6 +447,83 @@
     </section>
     <!-- /.section design -->
   </main>
+
+  <section class="section team">
+    <div class="container">
+      <div class="section-title team__section-title">
+        <h2 class="section-title__heading">Наша команда</h2>
+        <!-- /.section-title__heading -->
+        <div class="section-title__image">
+          <img src="img/team.svg" alt="team">
+        </div>
+        <!-- /.section-title__image -->
+        <p class="section-title__description section-title__description--team">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
+        <!-- /.section-title__description -->
+      </div>
+      <!-- /.section-title -->
+      <div class="row">
+        <div class="col-30">
+          <div class="card team__card">
+            <div class="icon team__icon"><img src="img/team-icon-1.svg" alt="idea" class="inner-icon team__inner-icon"></div>
+            <img src="img/team/team-1.jpg" alt="Сотрудник" class="card__image">
+            <div class="card__text card__text--team">
+              <h3 class="card__title card__title--team">Алексей Колмаков</h3>
+              <!-- /.card__title -->
+              <div class="card__subtitle card__subtitle--team ">Проектный менеджер</div>
+              <strong class="card__pricetag card__pricetag--team">
+                Опыт работы 8 лет
+              </strong> <!-- /.card__pricetag -->
+            </div>
+            <!-- /.card__text -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <div class="col-30">
+          <div class="card team__card">
+            <div class="icon team__icon"><img src="img/team-icon-2.svg" alt="idea" class="inner-icon team__inner-icon"></div>
+            <img src="img/team/team-2.jpg" alt="Сотрудник" class="card__image">
+            <div class="card__text card__text--team">
+              <h3 class="card__title card__title--team">Алиса Сухорукова</h3>
+              <!-- /.card__title -->
+              <div class="card__subtitle card__subtitle--team ">Дизайнер</div>
+              <strong class="card__pricetag card__pricetag--team">
+                Опыт работы 6 лет
+              </strong> <!-- /.card__pricetag -->
+            </div>
+            <!-- /.card__text -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <div class="col-30">
+          <div class="card team__card">
+            <div class="icon team__icon"><img src="img/team-icon-3.svg" alt="idea" class="inner-icon team__inner-icon"></div>
+            <img src="img/team/team-3.jpg" alt="Сотрудник" class="card__image">
+            <div class="card__text card__text--team">
+              <h3 class="card__title card__title--team">Давид Волынев</h3>
+              <!-- /.card__title -->
+              <div class="card__subtitle card__subtitle--team ">Бригадир</div>
+              <strong class="card__pricetag card__pricetag--team">
+                Опыт работы 7 лет
+              </strong> <!-- /.card__pricetag -->
+            </div>
+            <!-- /.card__text -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->        
+      <p class="team__text">
+          Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
+      </p>
+      <!-- /.text team__text -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section team -->
+
   <footer class="footer section--dark">
     <div class="container footer__container">
       <div class="footer__wrap">
@@ -454,19 +532,19 @@
           
           <div class="input-group footer__input-group">
             <label for="footer-user-name" class="label form__label label--light">Имя</label>
-            <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:">
+            <input type="text" autocomplete="off" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
 
           <div class="input-group footer__input-group">
             <label for="footer-user-phone" class="label form__label label--light">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" autocomplete="off" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
 
           <div class="input-group footer__input-group footer__input-group--full-width">
             <label for="footer-user-question" class="label form__label label--light">Вопрос</label>
-            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:">
+            <input type="text" autocomplete="off" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:">
           </div>
           <!-- /.input-group footer__input-group -->
 
@@ -475,7 +553,7 @@
             <label for="footer-policy-checkbox" class="policy__label policy__label--light policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
-          <button class="button button--primary footer__button">Отправить</button>
+          <button class="button button--primary footer__button" type="button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;">Отправить</button>
           </form>
           <!-- /.form footer__form -->
       </div>
@@ -528,17 +606,17 @@
       <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="modal-user-name" class="label form__label label--light">Имя</label>
-          <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
+          <input type="text" autocomplete="off" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
         </div>
         <!-- /.input-group modal__input-group -->
         <div class="input-group modal__input-group">
           <label for="modal-user-phone" class="label form__label label--light">Телефон</label>
-          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
+          <input type="tel" autocomplete="off" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <!-- /.input-group modal__input-group -->
         <div class="input-group modal__input-group">
           <label for="modal-user-email" class="label form__label label--light">Email</label>
-          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
+          <input type="email" autocomplete="off" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
         </div>
         <!-- /.input-group modal__input-group -->
        
@@ -547,7 +625,7 @@
           <label for="modal-policy-checkbox" class="policy__label policy__label--light">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button">Отправить заявку</button>
+        <button class="button button--primary modal__button" type="button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;">Отправить заявку</button>
       </form>
       <!-- /.form modal__form -->
     </div>
@@ -570,7 +648,25 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=3bbdc4bd-8351-4dd4-9883-eb24078753a4&lang=ru_RU">
+ <!--  <script src="https://api-maps.yandex.ru/2.1/?apikey=3bbdc4bd-8351-4dd4-9883-eb24078753a4&lang=ru_RU">
+  </script> -->
+  <script type="text/javascript">
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+        document.write('<script src="js/ie.js"><\/script>');
+  </script>
+  <script>
+    var isAddedMap = false;
+
+    $(window).scroll(function() {
+        var el = $('.map');
+        if ($(this).scrollTop() > el.offset().top - 800) {
+            if(isAddedMap) return;
+            isAddedMap = true;
+            var script = document.createElement('script');
+            script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
+            el.append(script);
+        };
+    });
   </script>
   <script src="js/main.js"></script>
 </body>
