@@ -859,7 +859,8 @@ img {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .types--lines {
   background: #fff url("../img/bg-lines-control.png") center no-repeat; }
@@ -1056,22 +1057,7 @@ img {
     border-radius: 50%; }
 
 .card__pricetag--clients {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  padding: 4rem; }
-  .card__pricetag--clients--wrapper {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between; }
+  margin-left: 2rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
