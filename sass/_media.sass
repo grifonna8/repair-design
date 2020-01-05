@@ -5,6 +5,13 @@
     &__item
       margin-right: 1rem  
 
+@media screen and ( min-width: 992px ) and ( max-width: 1264px )
+  .card
+    &__pricetag
+      &--clients
+        &--wrapper
+        font-size: 1rem
+
 @media screen and ( max-width: 991px )
   .nav
     display: none
@@ -38,6 +45,11 @@
       &--team
         color: $black
         font-size: 0.9rem
+  .clients
+    display: none
+  .footer
+    &__wrap
+      margin-top: 0
 
 @media screen and ( min-width: 761px )
   .section-title

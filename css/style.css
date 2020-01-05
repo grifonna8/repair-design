@@ -1038,14 +1038,29 @@ img {
   right: 0;
   text-align: center; }
 
+.clients {
+  padding-bottom: 25.285rem; }
+
 .section-title__description--clients {
   margin-bottom: 2.785rem; }
+
+.card__subtitle--clients {
+  margin-top: 0.85rem;
+  color: #959595;
+  font-size: 1.07rem;
+  line-height: 180%;
+  max-width: 23.142rem; }
+
+.card__text--clients {
+  margin-top: 0;
+  padding: 0 0 4.5rem 0; }
 
 .card__title--clients {
   font-size: 1.285rem;
   display: -webkit-box;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-left: 1rem; }
 
 .card__top--clients {
   display: -webkit-box;
@@ -1057,7 +1072,39 @@ img {
     border-radius: 50%; }
 
 .card__pricetag--clients {
-  margin-left: 2rem; }
+  display: -webkit-box;
+  display: flex;
+  font-size: 1.214rem;
+  -webkit-box-align: center;
+  align-items: center;
+  text-transform: none;
+  padding-right: 1rem; }
+  .card__pricetag--clients--left {
+    margin-right: 0.8rem;
+    margin-left: 1.214rem; }
+    .card__pricetag--clients--left::after {
+      content: '';
+      margin-left: 1rem;
+      background-color: #fff;
+      width: 1px;
+      height: 3.857rem; }
+  .card__pricetag--clients--icon {
+    margin-right: 1.071rem; }
+  .card__pricetag--clients--wrapper {
+    max-width: 21rem;
+    max-height: 3.857rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1.214rem 0;
+    position: absolute;
+    left: 0;
+    bottom: -1.79rem;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One', cursive;
+    background-color: #E3B873;
+    color: #fff; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
@@ -1067,7 +1114,8 @@ img {
     max-width: 63.07rem;
     margin: auto;
     padding: 2.5rem;
-    margin-bottom: 3.714rem; }
+    margin-bottom: 3.714rem;
+    margin-top: -20rem; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -1316,6 +1364,10 @@ img {
   .nav__item {
     margin-right: 1rem; } }
 
+@media screen and (min-width: 992px) and (max-width: 1264px) {
+  .card__pricetag--clients {
+    font-size: 1rem; } }
+
 @media screen and (max-width: 991px) {
   .nav {
     display: none; }
@@ -1341,7 +1393,11 @@ img {
     font-size: 1rem; }
   .card__title--team {
     color: #181818;
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; }
+  .clients {
+    display: none; }
+  .footer__wrap {
+    margin-top: 0; } }
 
 @media screen and (min-width: 761px) {
   .section-title__description {

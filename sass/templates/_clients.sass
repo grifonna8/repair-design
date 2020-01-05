@@ -1,23 +1,65 @@
+.clients
+  padding-bottom: 25.285rem 
 .section-title
   &__description
     &--clients
       margin-bottom: 2.785rem
 .card
+  &__subtitle
+    &--clients
+      margin-top: 0.85rem
+      color: $secondary
+      font-size: 1.07rem
+      line-height: 180%
+      max-width: 23.142rem
+  &__text
+    &--clients
+      margin-top: 0
+      padding: 0 0 4.5rem 0
   &__title
     &--clients
       font-size: 1.285rem
       display: flex
       flex-wrap: wrap
+      margin-left: 1rem
   &__top
     &--clients
       display: flex
       flex-direction: row
-
       &--image
         border-radius: 50%
   &__pricetag
     &--clients
-      margin-left: 2rem
+      display: flex
+      font-size: 1.214rem
+      align-items: center
+      text-transform: none
+      padding-right: 1rem
+      &--left
+        margin-right: 0.8rem
+        margin-left: 1.214rem
+        &::after
+          content: ''
+          margin-left: 1rem
+          background-color: $light
+          width: 1px
+          height: 3.857rem
+      &--icon
+        margin-right: 1.071rem 
+      &--wrapper
+        max-width: 21rem
+        max-height: 3.857rem
+        display: flex
+        align-items: center
+        padding: 1.214rem 0
+        position: absolute
+        left: 0
+        bottom: -1.79rem
+        font-size: 1.29rem
+        font-family: 'Yeseva One', cursive
+        background-color: $primary
+        color: $light
+
 
   // &__pricetag
   //   &--clients
