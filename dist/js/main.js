@@ -245,6 +245,34 @@ $(document).ready(function () {
         myMap.behaviors.disable('scrollZoom');
   }); */
 
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'MZqtJ1IrRNI',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+  
+  var isAddedMap = false;
+
+    $(window).scroll(function() {
+        var el = $('.map');
+        if ($(this).scrollTop() > el.offset().top - 800) {
+            if(isAddedMap) return;
+            isAddedMap = true;
+            var script = document.createElement('script');
+            script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
+            el.append(script);
+        };
+    });
 });
 
 

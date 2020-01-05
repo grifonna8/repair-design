@@ -100,7 +100,10 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+/*       policyCheckbox: {
+        required: true,
+      }, */
     }, /* сообщения при выводе ошибки */
     messages: {
       userName: {
@@ -260,8 +263,38 @@ $(document).ready(function () {
   function videoPlay(event) {
     event.target.playVideo();
   }
-    
+  
+  var isAddedMap = false;
 
+    $(window).scroll(function() {
+        var el = $('.map');
+        if ($(this).scrollTop() > el.offset().top - 800) {
+            if(isAddedMap) return;
+            isAddedMap = true;
+            var script = document.createElement('script');
+            script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
+            el.append(script);
+        };
+    });
+
+
+  //   $(function(){
+  //     var inp = $('input[name="policyCheckbox"]');
+  //     inp.on('click', function(){
+  //         var disable = true;
+  //         inp.each(function(id, el){
+  //             if(el.checked) disable = false;
+  //         });
+  //         $('button[class="modal__button"]').attr('disabled', disable ? true : false);
+  //     });
+  // });
+    $('.policy__checkbox').change(function(){
+      
+      if ($('.policy-checkbox').is(':checked')){
+        $('.modal__button').removeAttr('disabled');
+      }
+
+    });
 });
 
 

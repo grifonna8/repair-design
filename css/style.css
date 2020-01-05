@@ -467,6 +467,12 @@ div.invalid {
 input.invalid {
   border-bottom: 1px solid tomato; }
 
+#footer-user-name-error {
+  bottom: -20px; }
+
+#footer-user-phone-error {
+  bottom: -20px; }
+
 .container {
   width: 85%;
   max-width: 1256px;
