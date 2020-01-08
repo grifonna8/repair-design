@@ -134,7 +134,13 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      userQuestion: {
+        required: true,
+        minlength: 10,
+        maxlength: 400
+      },
+
     }, /* сообщения при выводе ошибки */
     messages: {
       userName: {
@@ -143,7 +149,12 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее 15 букв"
       },
       userPhone: "Телефон обязателен",
-    }
+      userQuestion: {
+        required: "Вопрос обязателен",
+        minlength: "Вопрос не короче 10 букв",
+        maxlength: "Вопрос не длиннее 400 букв"
+      },
+    },
   });
 
   $('.control__form').validate({
@@ -170,8 +181,16 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее 15 букв"
       },
       userPhone: "Телефон обязателен",
-    }
+    },
   });
+
+  $('#modal-policy-checkbox').click(function(){
+    if ($(this).is(':checked')){
+        $('.button').removeAttr('disabled');
+    } else {
+        $('.button').attr('disabled', 'disabled'); 
+    }
+});
   /* маска для телефона */
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
@@ -277,24 +296,6 @@ $(document).ready(function () {
         };
     });
 
-
-  //   $(function(){
-  //     var inp = $('input[name="policyCheckbox"]');
-  //     inp.on('click', function(){
-  //         var disable = true;
-  //         inp.each(function(id, el){
-  //             if(el.checked) disable = false;
-  //         });
-  //         $('button[class="modal__button"]').attr('disabled', disable ? true : false);
-  //     });
-  // });
-    $('.policy__checkbox').change(function(){
-      
-      if ($('.policy-checkbox').is(':checked')){
-        $('.modal__button').removeAttr('disabled');
-      }
-
-    });
 });
 
 

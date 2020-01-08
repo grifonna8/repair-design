@@ -473,6 +473,15 @@ input.invalid {
 #footer-user-phone-error {
   bottom: -20px; }
 
+#control-user-name-error {
+  bottom: -20px; }
+
+#control-user-phone-error {
+  bottom: -20px; }
+
+#footer-user-question-error {
+  bottom: -20px; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -508,7 +517,8 @@ img {
   padding: 60px 0; }
   .section--dark {
     background: #131313 url("../img/bg-lines-projects.png") center no-repeat;
-    color: #fff; }
+    color: #fff;
+    background-position: bottom 20px; }
   .section-title {
     text-align: center; }
     .section-title--light {
@@ -563,6 +573,9 @@ img {
 .smth {
   background-color: transparent;
   height: 6.8rem; }
+
+.clients {
+  background: url("../img/bg-lines-projects.png") center no-repeat; }
 
 .header {
   position: fixed;
@@ -844,6 +857,7 @@ img {
   outline: none; }
 
 .control__input-group {
+  position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -1373,6 +1387,10 @@ img {
 @media screen and (min-width: 992px) and (max-width: 1264px) {
   .card__pricetag--clients {
     font-size: 1rem; } }
+
+@media screen and (max-width: 991px) {
+  .button--primary {
+    box-shadow: none; } }
 
 @media screen and (max-width: 991px) {
   .nav {

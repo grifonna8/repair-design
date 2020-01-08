@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56840248, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56840248" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
@@ -17,12 +24,12 @@
       <div class="menu">
         <div class="logo menu__logo">Repair Design Project</div>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
+          <a href="#main-section" class="nav__item">Главная</a>
+          <a href="#projects-section" class="nav__item">Проекты</a>
           <a href="#" class="nav__item">Замер</a>
-          <a href="#" class="nav__item">Команда</a>
-          <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#team-section" class="nav__item">Команда</a>
+          <a href="#clients-section" class="nav__item">Отзывы</a>
+          <a href="#contacts-section" class="nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -36,21 +43,23 @@
 
   <main>
     <section class="hero">
+      <a id="main-section"></a>
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title animated fadeInUp slow">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
+          <h1 class="title hero__title animated fadeInUp slow">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1> 
           <p class="hero__text animated fadeInUp slow">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
           <button class="button hero__button button--primary button--primary--big animated fadeInUp slow" data-toggle='modal' formaction="send.php" formmethod="POST">Рассчитать стоимость</button>
           <button class="button hero__button button--outline button--outline--big animated fadeInUp slow" data-toggle='modal' formaction="send.php" formmethod="POST">Отправить заявку</button>
         </div> <!-- /.hero__content -->
       </div> <!-- /.container -->  
-      <a href="#" class="hero__scroll-down">листайте вниз</a>
+      <a href="#down" class="hero__scroll-down">листайте вниз</a>
     </section> <!-- /.hero -->
 
     <section class="section section--dark projects">
+      <a id="projects-section"></a>
       <div class="container">
         <div class="section-title section-title--left wow slideInLeft fast">
           <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
@@ -200,7 +209,7 @@
           </div>
           <button class="button button--primarу control__button" onclick="ym('56840248', 'reachGoal', 'button-send'); return true;">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+            <input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox">
             <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
@@ -222,7 +231,7 @@
         </div>
         <!-- /.section-title -->
         <div class="row">
-          <div class="col-30">
+          <div class="col-30 col-30--types">
             <div class="card types__card">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text card__text--types">
@@ -254,7 +263,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col-30">
+          <div class="col-30 col-30--types">
             <div class="card types__card">
               <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text card__text--types">
@@ -286,7 +295,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col-30">
+          <div class="col-30 col-30--types">
             <div class="card types__card">
               <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text card__text--types">
@@ -339,7 +348,7 @@
         </div>
         <!-- /.section-title -->
         <div class="row">
-          <div class="col-30">
+          <div class="col-30 col-30--design">
             <div class="card design__card">
               <img src="img/design/design-1.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
@@ -366,7 +375,7 @@
           </div>
           <!-- /.col -->
 
-          <div class="col-30">
+          <div class="col-30 col-30--design col-30--design--middle">
             <div class="card design__card">
               <img src="img/design/design-2.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
@@ -399,7 +408,7 @@
           </div>
           <!-- /.col -->
 
-          <div class="col-30">
+          <div class="col-30 col-30--design">
             <div class="card design__card">
               <img src="img/design/design-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
@@ -450,6 +459,7 @@
 
   <section class="section team">
     <div class="container">
+      <a id="team-section"></a>
       <div class="section-title team__section-title">
         <h2 class="section-title__heading">Наша команда</h2>
         <!-- /.section-title__heading -->
@@ -462,7 +472,7 @@
       </div>
       <!-- /.section-title -->
       <div class="row">
-        <div class="col-30">
+        <div class="col-30 col-30--team">
           <div class="card team__card">
             <div class="icon team__icon"><img src="img/team-icon-1.svg" alt="idea" class="inner-icon team__inner-icon"></div>
             <img src="img/team/team-1.jpg" alt="Сотрудник" class="card__image">
@@ -479,7 +489,7 @@
           <!-- /.card -->
         </div>
         <!-- /.col -->
-        <div class="col-30">
+        <div class="col-30 col-30--team">
           <div class="card team__card">
             <div class="icon team__icon"><img src="img/team-icon-2.svg" alt="idea" class="inner-icon team__inner-icon"></div>
             <img src="img/team/team-2.jpg" alt="Сотрудник" class="card__image">
@@ -496,7 +506,7 @@
           <!-- /.card -->
         </div>
         <!-- /.col -->
-        <div class="col-30">
+        <div class="col-30 col-30--team">
           <div class="card team__card">
             <div class="icon team__icon"><img src="img/team-icon-3.svg" alt="idea" class="inner-icon team__inner-icon"></div>
             <img src="img/team/team-3.jpg" alt="Сотрудник" class="card__image">
@@ -524,8 +534,9 @@
   </section>
   <!-- /.section team -->
 
-  <section class="section clients">
+  <section class="section clients clients--lines">
     <div class="container">
+      <a id="clients-section"></a>
       <div class="section-title clients__section-title">
         <h2 class="section-title__heading">Наши клиенты</h2>
         <!-- /.section-title__heading -->
@@ -643,7 +654,7 @@
           <!-- /.input-group footer__input-group -->
 
           <div class="policy footer__policy">
-            <input type="checkbox" name="policy-checkbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
+            <input type="checkbox" name="policyCheckbox" id="footer-policy-checkbox" class="policy__checkbox">
             <label for="footer-policy-checkbox" class="policy__label policy__label--light policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
@@ -653,7 +664,9 @@
       </div>
       <!-- /.footer-wrap -->
       <div class="contacts-wrap footer__contacts-wrap">
+        <a id="contacts-section"></a>
         <div class="contacts footer__contacts">Ростов на дону, Торговый центр Plaza Прямой&nbsp;телефон +7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</div>
+        <a id="down"></a>
         <!-- /.contacts -->
         <div class="links contacts-wrap__links">
           <a href="#" class="message-background contacts-wrap__message-background"><img src="img/message.png" alt="message-icon" class="message contacts-wrap__message"></a>
@@ -674,12 +687,12 @@
         <div class="menu">
           <div class="logo menu__logo">Repair Design Project</div>
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
+            <a href="#main-section" class="nav__item">Главная</a>
+            <a href="#projects-section" class="nav__item">Проекты</a>
             <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#team-section" class="nav__item">Команда</a>
+            <a href="#clients-section" class="nav__item">Отзывы</a>
+            <a href="#contacts-section" class="nav__item">Контакты</a>
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -716,7 +729,7 @@
         <!-- /.input-group modal__input-group -->
        
         <div class="policy modal__policy">
-          <input type="checkbox" name="policy-checkbox" id="modal-policy-checkbox" class="policy__checkbox">
+          <input type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox">
           <label for="modal-policy-checkbox" class="policy__label policy__label--light">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
