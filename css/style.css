@@ -403,6 +403,15 @@ template {
   .input-group {
     position: relative; }
 
+.modal__policy {
+  position: relative; }
+
+.footer__policy {
+  position: relative; }
+
+.control__policy {
+  position: relative; }
+
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
@@ -481,6 +490,43 @@ input.invalid {
 
 #footer-user-question-error {
   bottom: -20px; }
+
+#footerPolicyCheckbox-error {
+  position: absolute;
+  color: tomato;
+  bottom: -20px;
+  margin-left: 130px; }
+
+#footer-attention {
+  position: absolute;
+  color: tomato;
+  bottom: -40px;
+  margin-left: 130px; }
+
+#controlPolicyCheckbox-error {
+  position: absolute;
+  color: tomato;
+  bottom: -20px;
+  margin-left: 255px; }
+
+#control-attention {
+  position: absolute;
+  color: tomato;
+  bottom: -40px;
+  margin-left: 255px; }
+
+#modalPolicyCheckbox-error {
+  position: absolute;
+  color: tomato;
+  bottom: -20px; }
+
+#modal-attention {
+  position: absolute;
+  color: tomato;
+  bottom: -40px; }
+
+.home {
+  text-decoration: none; }
 
 .container {
   width: 85%;
@@ -593,11 +639,14 @@ img {
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center; }
+  .menu__logo {
+    text-decoration: none; }
 
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-size: 1.075rem; }
+  font-size: 1.075rem;
+  text-decoration: none; }
 
 .nav__item {
   color: #fff;
@@ -1094,6 +1143,7 @@ img {
 .card__pricetag--clients {
   display: -webkit-box;
   display: flex;
+  font-weight: normal;
   font-size: 1.214rem;
   -webkit-box-align: center;
   align-items: center;
@@ -1382,7 +1432,27 @@ img {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  #controlPolicyCheckbox-error {
+    position: absolute;
+    color: tomato;
+    bottom: -20px;
+    margin-left: 242px; }
+  #control-attention {
+    position: absolute;
+    color: tomato;
+    bottom: -40px;
+    margin-left: 242px; }
+  #footerPolicyCheckbox-error {
+    position: absolute;
+    color: tomato;
+    bottom: -20px;
+    margin-left: 110px; }
+  #footer-attention {
+    position: absolute;
+    color: tomato;
+    bottom: -40px;
+    margin-left: 110px; } }
 
 @media screen and (min-width: 992px) and (max-width: 1264px) {
   .card__pricetag--clients {
@@ -1414,10 +1484,13 @@ img {
   .card__subtitle--team {
     font-size: 1rem; }
   .card__pricetag--team {
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding-right: 0;
+    padding-left: 0; }
   .card__title--team {
     color: #181818;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    letter-spacing: 0.1px; }
   .clients {
     display: none; }
   .footer__wrap {
@@ -1574,7 +1647,27 @@ img {
       display: none; }
   .policy__label {
     -webkit-box-pack: start;
-    justify-content: flex-start; } }
+    justify-content: flex-start; }
+  #controlPolicyCheckbox-error {
+    position: absolute;
+    color: tomato;
+    bottom: 15px;
+    margin-left: 0; }
+  #control-attention {
+    position: absolute;
+    color: tomato;
+    bottom: 30px;
+    margin-left: 0; }
+  #footerPolicyCheckbox-error {
+    position: absolute;
+    color: tomato;
+    bottom: -15px;
+    margin-left: 0; }
+  #footer-attention {
+    position: absolute;
+    color: tomato;
+    bottom: -30px;
+    margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
   .section__title__description {
@@ -1607,11 +1700,37 @@ img {
       min-height: 14.785rem; }
     .control .video__play {
       max-width: 5.284rem;
-      max-height: 5.284rem; } }
+      max-height: 5.284rem; }
+  .modal__dialogue {
+    width: 95%; }
+  #modalPolicyCheckbox-error {
+    position: absolute;
+    color: tomato;
+    bottom: -15px; }
+  #modal-attention {
+    position: absolute;
+    color: tomato;
+    bottom: -30px; }
+  #controlPolicyCheckbox-error {
+    position: absolute;
+    color: tomato;
+    bottom: 15px;
+    margin-left: 0; }
+  #control-attention {
+    position: absolute;
+    color: tomato;
+    bottom: 30px;
+    margin-left: 0; } }
 
-@media screen and (max-height: 540px) {
+@media screen and (min-height: 300px) and (max-height: 540px) {
   .hero__scroll-down {
-    display: none; } }
+    display: none; }
+  .modal__dialogue {
+    height: 95%; }
+  .modal__input-group {
+    margin-bottom: 0; }
+  .modal__title {
+    margin-bottom: 0.2rem; } }
 
 @media screen and (min-width: 1200px) and (max-height: 610px) {
   .hero__scroll-down {

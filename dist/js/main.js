@@ -101,9 +101,6 @@ $(document).ready(function () {
         required: true,
         email: true
       },
-/*       policyCheckbox: {
-        required: true,
-      }, */
     }, /* сообщения при выводе ошибки */
     messages: {
       userName: {
@@ -115,7 +112,7 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
-      }
+      },
    }
   });
 
@@ -172,7 +169,7 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
     }, /* сообщения при выводе ошибки */
     messages: {
       userName: {

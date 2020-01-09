@@ -3,7 +3,27 @@
     font-size: 12px
   .nav
     &__item
-      margin-right: 1rem  
+      margin-right: 1rem
+  #controlPolicyCheckbox-error
+    position: absolute
+    color: tomato
+    bottom: -20px
+    margin-left: 242px
+  #control-attention
+    position: absolute
+    color: tomato
+    bottom: -40px
+    margin-left: 242px 
+  #footerPolicyCheckbox-error
+    position: absolute
+    color: tomato
+    bottom: -20px
+    margin-left: 110px
+  #footer-attention
+    position: absolute
+    color: tomato
+    bottom: -40px
+    margin-left: 110px  
 
 @media screen and ( min-width: 992px ) and ( max-width: 1264px )
   .card
@@ -46,10 +66,13 @@
     &__pricetag
       &--team
         font-size: 1rem
+        padding-right: 0
+        padding-left: 0
     &__title
       &--team
         color: $black
         font-size: 0.9rem
+        letter-spacing: 0.1px
   .clients
     display: none
   .footer
@@ -215,6 +238,26 @@
   .policy
     &__label
       justify-content: flex-start
+  #controlPolicyCheckbox-error
+    position: absolute
+    color: tomato
+    bottom: 15px
+    margin-left: 0
+  #control-attention
+    position: absolute
+    color: tomato
+    bottom: 30px
+    margin-left: 0
+  #footerPolicyCheckbox-error
+    position: absolute
+    color: tomato
+    bottom: -15px
+    margin-left: 0
+  #footer-attention
+    position: absolute
+    color: tomato
+    bottom: -30px
+    margin-left: 0 
 
 @media screen and ( max-width: 570px )
   .section
@@ -253,11 +296,40 @@
       &__play
         max-width: 5.284rem
         max-height: 5.284rem
+  .modal
+    &__dialogue
+      width: 95%
+  #modalPolicyCheckbox-error
+    position: absolute
+    color: tomato
+    bottom: -15px
+  #modal-attention
+    position: absolute
+    color: tomato
+    bottom: -30px
+  #controlPolicyCheckbox-error
+    position: absolute
+    color: tomato
+    bottom: 15px
+    margin-left: 0
+  #control-attention
+    position: absolute
+    color: tomato
+    bottom: 30px
+    margin-left: 0
 
-@media screen and ( max-height: 540px )
+@media screen and (min-height: 300px ) and ( max-height: 540px )
   .hero
     &__scroll-down
       display: none
+  .modal
+    &__dialogue
+      height: 95%
+    &__input-group
+      margin-bottom: 0
+    &__title
+      margin-bottom: 0.2rem
+ 
 
 @media screen and ( min-width: 1200px ) and ( max-height: 610px )
   .hero
