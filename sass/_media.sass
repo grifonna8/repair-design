@@ -23,19 +23,25 @@
     position: absolute
     color: tomato
     bottom: -40px
-    margin-left: 110px  
+    margin-left: 110px
+  .control
+    &__video
+      height: 395px  
 
 @media screen and ( min-width: 992px ) and ( max-width: 1264px )
   .card
+    &__title
+      &--team
+        font-size: 1.1rem
+    &__subtitle
+      &--team
+        font-size: 1.1rem
     &__pricetag
+      &--team
+        font-size: 1rem
       &--clients
         &--wrapper
         font-size: 1rem
-
-@media screen and ( max-width: 991px )
-  .button
-    &--primary
-      box-shadow: none
     
 @media screen and ( max-width: 991px )
   .nav
@@ -45,12 +51,13 @@
       display: none
     &__content
       margin-left: 0
+  .container
+    width: 90%
   .section-title
     &__description
       &--team
         color: $light
-        font-size: 1.071rem
-        max-width: 24.28rem
+        font-size: 1.25rem
         line-height: 135.84%
   .team
     background: $dark
@@ -63,9 +70,14 @@
     &__subtitle
       &--team
         font-size: 1rem
+    &__text
+      &--team
+        &--first
+          margin-top: -8.5rem
     &__pricetag
       &--team
-        font-size: 1rem
+        font-size: 0.9rem
+        font-weight: regular
         padding-right: 0
         padding-left: 0
     &__title
@@ -73,11 +85,22 @@
         color: $black
         font-size: 0.9rem
         letter-spacing: 0.1px
+      &--types
+        font-size: 0.9rem
   .clients
     display: none
   .footer
     &__wrap
       margin-top: 0
+  .card
+    &__image
+      &__adaptive
+        display: initial
+      &__big
+        display: none
+  .button
+    &--primary
+      box-shadow: none
 
 @media screen and ( min-width: 761px )
   .section-title
@@ -139,7 +162,7 @@
         font-size: 1.285rem
     &__pricetag
       &--team
-        font-size: 0.928rem
+        font-size: 1.083rem
     &__text
       margin-left: 0
       &--team
@@ -189,10 +212,13 @@
   .control
     background-color: $dark
     padding-bottom: 0
+    &__video
+      height: 370px
+      width: 100%  
     &__text
       color: $light
-      max-width: 48.4rem
-      font-size: 1rem
+      max-width: 28.3rem
+      font-size: 1.166rem
       line-height: 1.71rem
     &__form
       flex-direction: column
@@ -259,11 +285,27 @@
     bottom: -30px
     margin-left: 0 
 
+@media screen and ( max-width: 725px )
+  .control
+    &__video
+      height: 170px
+      min-height: 0
+      width: auto
 @media screen and ( max-width: 570px )
   .section
+    &-title
+      &__text
+        font-size: 1.166rem
+        max-width: 25.41rem
+    &--dark
+      &__projects
+        padding-top: 10px
     &__title
       &__description
         max-width: 21.86rem
+      &__heading
+        &--primary
+          margin-top: 0
   .contacts
     &__button
       display: none
@@ -272,30 +314,54 @@
       color: $light
       text-decoration: none
   .title
-      font-size: 1.64rem
+      font-size: 1.916rem
   .hero
+    background: $dark url('../img/hero-bg-adaptive.jpg') no-repeat center / cover
+    &::after
+      display: none
     &__scroll-down
       display: none
-    &__content
-      max-width: 22.86rem
     &__text
-      font-size: 1.29rem
-      margin-bottom: 2.28rem
+      font-size: 1.5rem
+      margin-bottom: 2.66rem
     &__button
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
-      margin-left: 0  
+      margin-left: 0
+      font-size: 1.083rem
+  .types
+    background: $light
+  .team
+    background: $dark 
+  .button
+    &--primary
+      &--big
+        width: 100%
+  .button
+    &--outline
+      &--big
+        width: 100% 
   .control
     background-color: $dark
     &__video
       background: url('../img/video-mask-adaptive.png') center no-repeat
-      max-width: 24.28rem
       min-height: 14.785rem
+      width: auto
+      height: 170px
     .video
       &__play
         max-width: 5.284rem
         max-height: 5.284rem
+  .col-30
+    &--design
+      &--last
+        margin-bottom: -30px
+  .team
+    padding-top: 1px
+    &__card
+      &--last
+        margin-bottom: -30px
   .modal
     &__dialogue
       width: 95%
@@ -317,11 +383,25 @@
     color: tomato
     bottom: 30px
     margin-left: 0
+  .footer
+    &__map
+      height: 255px
+  .project
+    &__image
+      display: none
+      &__adaptive
+        display: inline-block
+
+        
 
 @media screen and (min-height: 300px ) and ( max-height: 540px )
   .hero
     &__scroll-down
       display: none
+    &__content
+      margin-bottom: 3.5rem
+    &__text
+      margin-bottom: 0
   .modal
     &__dialogue
       height: 95%
@@ -329,6 +409,7 @@
       margin-bottom: 0
     &__title
       margin-bottom: 0.2rem
+    
  
 
 @media screen and ( min-width: 1200px ) and ( max-height: 610px )

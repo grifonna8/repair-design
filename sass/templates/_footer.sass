@@ -1,6 +1,10 @@
 .footer
   background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
   padding-top: 3rem
+  &-acception
+    &--invisible 
+      display: none
+      opacity: 0
   &__wrap
     background-color: $black
     max-width: 63.07rem
@@ -46,7 +50,9 @@
   &__map
     margin-top: 2rem
     margin-bottom: 4rem
-    min-height: 465px
+    width: 100%
+    max-width: 925px
+    height: 465px
   &__contacts-wrap
     display: flex
     flex-direction: column

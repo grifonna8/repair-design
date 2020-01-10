@@ -187,10 +187,99 @@ $(document).ready(function () {
     } else {
         $('.button').attr('disabled', 'disabled'); 
     }
-});
+  });
+
+  $('#footer-policy-checkbox').click(function(){
+    if ($(this).is(':checked')){
+        $('.button').removeAttr('disabled');
+    } else {
+        $('.button').attr('disabled', 'disabled'); 
+    };
+  });
+
+  $('#control-policy-checkbox').click(function(){
+    if ($(this).is(':checked')){
+        $('.button').removeAttr('disabled');
+    } else {
+        $('.button').attr('disabled', 'disabled'); 
+    };
+  });
+
+  $('#control-policy-checkbox').click(function(){
+    if ($(this).is(':checked')){
+        $('.control-acception').toggleClass('control-acception--invisible');
+    } else {
+        $('.control-acception').toggleClass('control-acception--invisible'); 
+    };
+  });
+
+  $('#footer-policy-checkbox').click(function(){
+    if ($(this).is(':checked')){
+        $('.footer-acception').toggleClass('footer-acception--invisible');
+    } else {
+        $('.footer-acception').toggleClass('footer-acception--invisible'); 
+    };
+  });
+
+  $('#modal-policy-checkbox').click(function(){
+    if ($(this).is(':checked')){
+        $('.modal-acception').toggleClass('modal-acception--invisible');
+    } else {
+        $('.modal-acception').toggleClass('modal-acception--invisible'); 
+    };
+  });
   /* маска для телефона */
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
+  var name = false,
+      email = false,
+      phone = false,
+      question = false;
+  
+  $('.footer__form').on('input', function () {
+    $('#footer-user-name').on('input', function () {
+        name = true;
+    });
+    $('#footer-user-phone').on('input', function () {
+      phone = true;
+    });
+    $('#footer-user-question').on('input', function () {
+      question = true;
+    });
+
+    if((name == true) && (phone == true) && (question == true)){
+      $(".footer-attention").addClass("footer-attention--visibility");
+    };
+  });
+
+  $('.modal__form').on('input', function () {
+    $('#modal-user-name').on('input', function () {
+        name = true;
+    });
+    $('#modal-user-phone').on('input', function () {
+      phone = true;
+    });
+    $('#modal-user-email').on('input', function () {
+      email = true;
+    });
+
+    if((name == true) && (phone == true) && (email == true)){
+      $(".modal-attention").addClass("modal-attention--visibility");
+    };
+  });
+
+  $('.control__form').on('input', function () {
+    $('#control-user-name').on('input', function () {
+        name = true;
+    });
+    $('#control-user-phone').on('input', function () {
+      phone = true;
+    });
+
+    if((name == true) && (phone == true)){
+      $(".control-attention").addClass("control-attention--visibility");
+    };
+  });
   // $('#control-form').submit(function(e){
   //   e.preventDefault(); /* произвели отключение стандартного события отправки формы через php, теперь она не работает */
   //   $.ajax({
@@ -288,7 +377,7 @@ $(document).ready(function () {
             if(isAddedMap) return;
             isAddedMap = true;
             var script = document.createElement('script');
-            script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
+            script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false";
             el.append(script);
         };
     });

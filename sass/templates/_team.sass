@@ -1,6 +1,9 @@
 .team
+  background: $light url('../img/bg-lines-control.png') center no-repeat
+  background-size: 100%
   &__card
     position: relative
+    margin-left: 2rem
   &__section-title
     margin-bottom: 2rem
   &__text
@@ -40,6 +43,9 @@
       max-width: 32rem
       margin-bottom: 5.285rem
 .card
+  &__text
+    &--team
+      margin-top: -7rem
   &__title
     &--team
       text-align: center
@@ -65,3 +71,6 @@
       left: 0
       right: 0
       text-align: center
+  &__image
+    &__adaptive
+      display: none

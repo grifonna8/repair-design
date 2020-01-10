@@ -62,7 +62,7 @@
       <a href="#down" class="hero__scroll-down">листайте вниз</a>
     </section> <!-- /.hero -->
 
-    <section class="section section--dark projects">
+    <section class="section section--dark projects section--dark__projects">
       <a id="projects-section"></a>
       <div class="container">
         <div class="section-title section-title--left wow slideInLeft fast">
@@ -175,13 +175,16 @@
                 <div class="swiper-wrapper swiper-no-swiping">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                      <img src="img/projects/project.jpg" alt="">
+                      <img src="img/projects/project.jpg" alt="" class="project__image">
+                      <div class="project__image__adaptive__wrapper"><img src="img/projects/project-small.jpg" alt="" class="project__image__adaptive"></div> 
                     </div>
                     <div class="swiper-slide">
-                      <img src="img/projects/project.jpg" alt="">
+                      <img src="img/projects/project.jpg" alt="" class="project__image">
+                      <img src="img/projects/project-small.jpg" alt="" class="project__image__adaptive">
                     </div>
                     <div class="swiper-slide">
-                      <img src="img/projects/project.jpg" alt="">
+                      <img src="img/projects/project.jpg" alt="" class="project__image">
+                      <img src="img/projects/project-small.jpg" alt="" class="project__image__adaptive">
                     </div>
                 </div>
             </div>
@@ -225,10 +228,10 @@
           </div>
           <button class="button button--primarу control__button" onclick="ym('56840248', 'reachGoal', 'button-send'); return true;" disabled="disabled">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="controlPolicyCheckbox" id="policy-checkbox" class="policy__checkbox">
-            <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
-            <div id="controlPolicyCheckbox-error">Дайте согласие</div>
-            <div id="control-attention">Все поля должны быть заполнены</div>
+            <input type="checkbox" name="controlPolicyCheckbox" id="control-policy-checkbox" class="policy__checkbox">
+            <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+            <div id="controlPolicyCheckbox-error" class="control-acception">Дайте согласие</div>
+            <div id="control-attention" class="control-attention" data-toggle='control-attention'>Все поля должны быть заполнены</div>
           </div>
           <!-- /.policy -->
         </form>
@@ -253,7 +256,7 @@
             <div class="card types__card">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text card__text--types">
-                <h3 class="card__title">Косметический ремонт</h3>
+                <h3 class="card__title card__title--types">Косметический ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -285,7 +288,7 @@
             <div class="card types__card">
               <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text card__text--types">
-                <h3 class="card__title">Капитальный ремонт</h3>
+                <h3 class="card__title card__title--types">Капитальный ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -317,7 +320,7 @@
             <div class="card types__card">
               <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text card__text--types">
-                <h3 class="card__title">Дизайнерский ремонт</h3>
+                <h3 class="card__title card__title--types">Дизайнерский ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -426,7 +429,7 @@
           </div>
           <!-- /.col -->
 
-          <div class="col-30 col-30--design">
+          <div class="col-30 col-30--design col-30--design--last">
             <div class="card design__card">
               <img src="img/design/design-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
@@ -493,14 +496,15 @@
         <div class="col-30 col-30--team">
           <div class="card team__card">
             <div class="icon team__icon"><img src="img/team-icon-1.svg" alt="idea" class="inner-icon team__inner-icon"></div>
-            <img src="img/team/team-1.jpg" alt="Сотрудник" class="card__image">
-            <div class="card__text card__text--team">
+            <img src="img/team/team-1.jpg" alt="Сотрудник" class="card__image card__image__big">
+            <img src="img/team/team-1-adaptive.jpg" alt="Сотрудник" class="card__image card__image__adaptive">
+            <div class="card__text card__text--team card__text--team--first">
               <h3 class="card__title card__title--team">Алексей Колмаков</h3>
               <!-- /.card__title -->
               <div class="card__subtitle card__subtitle--team ">Проектный менеджер</div>
-              <strong class="card__pricetag card__pricetag--team">
+              <span class="card__pricetag card__pricetag--team">
                 Опыт работы 8 лет
-              </strong> <!-- /.card__pricetag -->
+              </span> <!-- /.card__pricetag -->
             </div>
             <!-- /.card__text -->
           </div>
@@ -510,14 +514,15 @@
         <div class="col-30 col-30--team">
           <div class="card team__card">
             <div class="icon team__icon"><img src="img/team-icon-2.svg" alt="idea" class="inner-icon team__inner-icon"></div>
-            <img src="img/team/team-2.jpg" alt="Сотрудник" class="card__image">
+            <img src="img/team/team-2.jpg" alt="Сотрудник" class="card__image card__image__big">
+            <img src="img/team/team-2-adaptive.jpg" alt="Сотрудник" class="card__image card__image__adaptive">
             <div class="card__text card__text--team">
               <h3 class="card__title card__title--team">Алиса Сухорукова</h3>
               <!-- /.card__title -->
               <div class="card__subtitle card__subtitle--team ">Дизайнер</div>
-              <strong class="card__pricetag card__pricetag--team">
+              <span class="card__pricetag card__pricetag--team">
                 Опыт работы 6 лет
-              </strong> <!-- /.card__pricetag -->
+              </span> <!-- /.card__pricetag -->
             </div>
             <!-- /.card__text -->
           </div>
@@ -525,16 +530,17 @@
         </div>
         <!-- /.col -->
         <div class="col-30 col-30--team">
-          <div class="card team__card">
+          <div class="card team__card team__card--last">
             <div class="icon team__icon"><img src="img/team-icon-3.svg" alt="idea" class="inner-icon team__inner-icon"></div>
-            <img src="img/team/team-3.jpg" alt="Сотрудник" class="card__image">
+            <img src="img/team/team-3.jpg" alt="Сотрудник" class="card__image card__image__big">
+            <img src="img/team/team-3-adaptive.jpg" alt="Сотрудник" class="card__image card__image__adaptive">
             <div class="card__text card__text--team">
               <h3 class="card__title card__title--team">Давид Волынев</h3>
               <!-- /.card__title -->
               <div class="card__subtitle card__subtitle--team ">Бригадир</div>
-              <strong class="card__pricetag card__pricetag--team">
+              <span class="card__pricetag card__pricetag--team">
                 Опыт работы 7 лет
-              </strong> <!-- /.card__pricetag -->
+              </span> <!-- /.card__pricetag -->
             </div>
             <!-- /.card__text -->
           </div>
@@ -571,7 +577,7 @@
           <div class="card clients__card">
             <div class="card__text card__text--clients">
               <div class="card__top--clients">
-                <div class="image-wrapper team__image-wrapper"><img src="img/clients/client-1.jpg" alt="client-1" class="card__top--clients--image"></div> 
+                <div class="image-wrapper clients__image-wrapper"><img src="img/clients/client-1.jpg" alt="client-1" class="card__top--clients--image"></div> 
                 <h3 class="card__title card__title--clients">Савельева Екатерина Львовна</h3>
                 <!-- /.card__title --></div>
               <div class="card__subtitle card__subtitle--clients">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</div>
@@ -595,7 +601,7 @@
           <div class="card clients__card">
             <div class="card__text card__text--clients">
               <div class="card__top--clients">
-                <div class="image-wrapper team__image-wrapper"><img src="img/clients/client-2.jpg" alt="client-1" class="card__top--clients--image"></div> 
+                <div class="image-wrapper clients__image-wrapper"><img src="img/clients/client-2.jpg" alt="client-1" class="card__top--clients--image"></div> 
                 <h3 class="card__title card__title--clients">Большов Михаил Анатольевич</h3>
                 <!-- /.card__title --></div>
               <div class="card__subtitle card__subtitle--clients">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</div>
@@ -619,11 +625,11 @@
           <div class="card clients__card">
             <div class="card__text card__text--clients">
               <div class="card__top--clients">
-                <div class="image-wrapper team__image-wrapper"><img src="img/clients/client-3.jpg" alt="client-1" class="card__top--clients--image"></div> 
+                <div class="image-wrapper clients__image-wrapper"><img src="img/clients/client-3.jpg" alt="client-1" class="card__top--clients--image"></div> 
                 <h3 class="card__title card__title--clients">Хасанов Даниил Муратович</h3>
                 <!-- /.card__title --></div>
               <div class="card__subtitle card__subtitle--clients">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</div>
-              <div class="card__pricetag--clients--wrapper">
+              <div class="card__pricetag--clients--wrapper card__pricetag--clients--wrapper--last">
                 <div class="card__pricetag--clients card__pricetag--clients--left">
                   <img src="img/clients/icon1-1.svg" alt="" class="card__pricetag--clients--icon">
                   56 М<sup>2</sup>
@@ -674,8 +680,8 @@
           <div class="policy footer__policy">
             <input type="checkbox" name="footerPolicyCheckbox" id="footer-policy-checkbox" class="policy__checkbox">
             <label for="footer-policy-checkbox" class="policy__label policy__label--light policy__label--center">Я соглашаюсь с обработкой данных</label>
-            <div id="footerPolicyCheckbox-error">Дайте согласие</div>
-            <div id="footer-attention">Все поля должны быть заполнены</div>
+            <div id="footerPolicyCheckbox-error" class="footer-acception">Дайте согласие</div>
+            <div id="footer-attention" class="footer-attention">Все поля должны быть заполнены</div>
           </div>
           <!-- /.policy -->
           <button class="button button--primary footer__button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;" disabled="disabled">Отправить</button>
@@ -689,22 +695,26 @@
         <a id="down"></a>
         <!-- /.contacts -->
         <div class="links contacts-wrap__links">
-          <a href="#" class="message-background contacts-wrap__message-background"><img src="img/message.png" alt="message-icon" class="message contacts-wrap__message"></a>
-          <a href="#" class="message-background contacts-wrap__message-background"><img src="img/instagram.png" alt="instagram-icon" class="instagram contacts-wrap__instagram"></a>
+          <a href="mailto:grifonna8@gmail.com" class="message-background contacts-wrap__message-background"><img src="img/message.png" alt="message-icon" class="message contacts-wrap__message"></a>
+          <a href="https://www.instagram.com/glo_web_academy/" target="blank" class="message-background contacts-wrap__message-background"><img src="img/instagram.png" alt="instagram-icon" class="instagram contacts-wrap__instagram"></a>
         </div>
         <!-- /.links contacts-wrap__links -->
       </div>
       <!-- /.contacts-wrap footer__contacts-wrap -->
 
-      <div class="map footer__map" id="map">
+      <div class="map__wrapper">
+        <div class="map footer__map" id="map">
         <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e1b29bfb831e6868ca0460087b9bd7b138ea93171c356178daa1ba8f18be9dd&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script> -->
       </div>
       <!-- /.map footer__map -->
+    </div>
+      
     </div>
     <!-- /.container -->
     <div class="footer__menu">
       <div class="container">
         <div class="menu">
+          <a class="home" href="http://grifonna8.ru/project"></a>
           <div class="logo menu__logo">Repair Design Project</div>
           <nav class="nav menu__nav">
             <a href="#main-section" class="nav__item">Главная</a>
@@ -751,8 +761,8 @@
         <div class="policy modal__policy">
           <input type="checkbox" name="modalPolicyCheckbox" id="modal-policy-checkbox" class="policy__checkbox">
           <label for="modal-policy-checkbox" class="policy__label policy__label--light">Я соглашаюсь с обработкой данных</label>
-          <div id="modalPolicyCheckbox-error">Дайте согласие</div>
-          <div id="modal-attention">Все поля должны быть заполнены</div>
+          <div id="modalPolicyCheckbox-error" class="modal-acception">Дайте согласие</div>
+          <div id="modal-attention" class="modal-attention">Все поля должны быть заполнены</div>
         </div>
         <!-- /.policy -->
         <button class="button button--primary modal__button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;" disabled="disabled">Отправить заявку</button>
@@ -765,7 +775,6 @@
   <div class="modal--small">
     <div class="modal--small__dialogue">
       <button class="modal--small__close"></button>
-      <h3 class="modal__title modal__title--center"></h3>
     </div>
   </div>
     
