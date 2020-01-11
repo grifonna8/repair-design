@@ -35,7 +35,8 @@ $(document).ready(function () {
   $(window).scroll(function () {
     // Если отступ сверху больше 750px то показываем кнопку "Наверх"
     if ($(this).scrollTop() > 750) {
-        $('.button--up').fadeIn();
+      $('.button--up').addClass('button--up--visible');  
+      $('.button--up').fadeIn();
     } else {
         $('.button--up').fadeOut();
     }
@@ -85,201 +86,154 @@ $(document).ready(function () {
   });
 
   // валидация формы
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // одно строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
+  //Валидация формы
+  function validateForm(form){
+    $(form).validate({
+      errorClass: "invalid",
+      rules: {
+        // simple rule, converted to {required:true}
+        policyCheckbox: "required",
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 10
+        },
+        userPhone: "required",
+        userQuestion: {
+          required: true,
+          minlength: 20,
+          maxlength: 400
+        },
+        // compound rule
+        userEmail: {
+          required: true,
+          email: true
+        }
       },
-      userPhone: "required",
-      // правила-объект (блок правил)
-      userEmail: {
-        required: true,
-        email: true
+      errorElement: "div",
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя не короче 2 букв",
+          maxlength: "Имя не длиннее 10 букв"
+        },
+        policyCheckbox: "Подтвердите согласие на обработку данных",
+        userPhone: "Телефон обязателен",
+        userQuestion: {
+          required: "Вопрос обязателен",
+          minlength: "Вопрос слишком короткий",
+          maxlength: "Слишком длинный вопрос"
+        },
+        userEmail: {
+          required: "Обязательно укажите email",
+          email: "Введите в формате name@domain.com"
+        }
       },
-    }, /* сообщения при выводе ошибки */
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
+      errorPlacement: function (error, element) {
+        if (element.attr("type") == "checkbox") {
+            return element.next('label').append(error);
+        }
+        error.insertAfter($(element));
       },
-      userPhone: "Телефон обязателен",
-      userEmail: {
-        required: "Заполните поле",
-        email: "Введите корректный email"
-      },
-   }
-  });
-
-  $('.footer__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // одно строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      // правила-объект (блок правил)
-      userEmail: {
-        required: true,
-        email: true
-      },
-      userQuestion: {
-        required: true,
-        minlength: 10,
-        maxlength: 400
-      },
-
-    }, /* сообщения при выводе ошибки */
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
-      },
-      userPhone: "Телефон обязателен",
-      userQuestion: {
-        required: "Вопрос обязателен",
-        minlength: "Вопрос не короче 10 букв",
-        maxlength: "Вопрос не длиннее 400 букв"
-      },
-    },
-  });
-
-  $('.control__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // одно строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      // правила-объект (блок правил)
-      userEmail: {
-        required: true,
-        email: true
-      },
-    }, /* сообщения при выводе ошибки */
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
-      },
-      userPhone: "Телефон обязателен",
-    },
-  });
-
-  $('#modal-policy-checkbox').click(function(){
-    if ($(this).is(':checked')){
-        $('.button').removeAttr('disabled');
-    } else {
-        $('.button').attr('disabled', 'disabled'); 
-    }
-  });
-
-  $('#footer-policy-checkbox').click(function(){
-    if ($(this).is(':checked')){
-        $('.button').removeAttr('disabled');
-    } else {
-        $('.button').attr('disabled', 'disabled'); 
-    };
-  });
-
-  $('#control-policy-checkbox').click(function(){
-    if ($(this).is(':checked')){
-        $('.button').removeAttr('disabled');
-    } else {
-        $('.button').attr('disabled', 'disabled'); 
-    };
-  });
-
-  $('#control-policy-checkbox').click(function(){
-    if ($(this).is(':checked')){
-        $('.control-acception').toggleClass('control-acception--invisible');
-    } else {
-        $('.control-acception').toggleClass('control-acception--invisible'); 
-    };
-  });
-
-  $('#footer-policy-checkbox').click(function(){
-    if ($(this).is(':checked')){
-        $('.footer-acception').toggleClass('footer-acception--invisible');
-    } else {
-        $('.footer-acception').toggleClass('footer-acception--invisible'); 
-    };
-  });
-
-  $('#modal-policy-checkbox').click(function(){
-    if ($(this).is(':checked')){
-        $('.modal-acception').toggleClass('modal-acception--invisible');
-    } else {
-        $('.modal-acception').toggleClass('modal-acception--invisible'); 
-    };
-  });
+    });
+  }
+  validateForm('.modal__form');
+  validateForm('.control__form');
+  validateForm('.footer__form');
   /* маска для телефона */
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
+//   $('.modal__form').validate({
+//     errorClass: "invalid",
+//     errorElement: "div",
+//     rules: {
+//       // одно строчное правило
+//       policyCheckbox: "required",
+//       userName: {
+//         required: true,
+//         minlength: 2,
+//         maxlength: 15
+//       },
+//       userPhone: "required",
+//       // правила-объект (блок правил)
+//       userEmail: {
+//         required: true,
+//         email: true
+//       },
+// /*       policyCheckbox: {
+//         required: true,
+//       }, */
+//     }, /* сообщения при выводе ошибки */
+//     messages: {
+//       userName: {
+//         required: "Имя обязательно",
+//         minlength: "Имя не короче 2 букв",
+//         maxlength: "Имя не длиннее 15 букв"
+//       },
+//       userPhone: "Телефон обязателен",
+//       userEmail: {
+//         required: "Заполните поле",
+//         email: "Введите корректный email"
+//       }
+//    }
+//   });
 
-  var name = false,
-      email = false,
-      phone = false,
-      question = false;
+//   $('.footer__form').validate({
+//     errorClass: "invalid",
+//     errorElement: "div",
+//     rules: {
+//       // одно строчное правило
+//       userName: {
+//         required: true,
+//         minlength: 2,
+//         maxlength: 15
+//       },
+//       userPhone: "required",
+//       // правила-объект (блок правил)
+//       userEmail: {
+//         required: true,
+//         email: true
+//       }
+//     }, /* сообщения при выводе ошибки */
+//     messages: {
+//       userName: {
+//         required: "Имя обязательно",
+//         minlength: "Имя не короче 2 букв",
+//         maxlength: "Имя не длиннее 15 букв"
+//       },
+//       userPhone: "Телефон обязателен",
+//     }
+//   });
+
+//   $('.control__form').validate({
+//     errorClass: "invalid",
+//     errorElement: "div",
+//     rules: {
+//       // одно строчное правило
+//       policyCheckbox: "required",
+//       userName: {
+//         required: true,
+//         minlength: 2,
+//         maxlength: 15
+//       },
+//       userPhone: "required",
+//       // правила-объект (блок правил)
+//       userEmail: {
+//         required: true,
+//         email: true
+//       }
+//     }, /* сообщения при выводе ошибки */
+//     messages: {
+//       policyCheckbox: "Подтвердите согланисе на обработку данных",
+//       userName: {
+//         required: "Имя обязательно",
+//         minlength: "Имя не короче 2 букв",
+//         maxlength: "Имя не длиннее 15 букв"
+//       },
+//       userPhone: "Телефон обязателен",
+//     }
+//   });
   
-  $('.footer__form').on('input', function () {
-    $('#footer-user-name').on('input', function () {
-        name = true;
-    });
-    $('#footer-user-phone').on('input', function () {
-      phone = true;
-    });
-    $('#footer-user-question').on('input', function () {
-      question = true;
-    });
 
-    if((name == true) && (phone == true) && (question == true)){
-      $(".footer-attention").addClass("footer-attention--visibility");
-    };
-  });
-
-  $('.modal__form').on('input', function () {
-    $('#modal-user-name').on('input', function () {
-        name = true;
-    });
-    $('#modal-user-phone').on('input', function () {
-      phone = true;
-    });
-    $('#modal-user-email').on('input', function () {
-      email = true;
-    });
-
-    if((name == true) && (phone == true) && (email == true)){
-      $(".modal-attention").addClass("modal-attention--visibility");
-    };
-  });
-
-  $('.control__form').on('input', function () {
-    $('#control-user-name').on('input', function () {
-        name = true;
-    });
-    $('#control-user-phone').on('input', function () {
-      phone = true;
-    });
-
-    if((name == true) && (phone == true)){
-      $(".control-attention").addClass("control-attention--visibility");
-    };
-  });
   // $('#control-form').submit(function(e){
   //   e.preventDefault(); /* произвели отключение стандартного события отправки формы через php, теперь она не работает */
   //   $.ajax({
@@ -382,6 +336,28 @@ $(document).ready(function () {
         };
     });
 
+
+  //   $(function(){
+  //     var inp = $('input[name="policyCheckbox"]');
+  //     inp.on('click', function(){
+  //         var disable = true;
+  //         inp.each(function(id, el){
+  //             if(el.checked) disable = false;
+  //         });
+  //         $('button[class="modal__button"]').attr('disabled', disable ? true : false);
+  //     });
+  // });
+    $('.policy__checkbox').change(function(){
+      
+      if ($('.policy-checkbox').is(':checked')){
+        $('.modal__button').removeAttr('disabled');
+      }
+
+    });
+
+    $("body").on('click', '[href*="#"]', function(e){
+      var fixed_offset = 100;
+      $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);
+      e.preventDefault();
+    });
 });
-
-

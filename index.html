@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Repair design Project</title>
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -59,7 +59,7 @@
           <button class="button hero__button button--outline button--outline--big animated fadeInUp slow" data-toggle='modal' formaction="send.php" formmethod="POST">Отправить заявку</button>
         </div> <!-- /.hero__content -->
       </div> <!-- /.container -->  
-      <a href="#down" class="hero__scroll-down">листайте вниз</a>
+      <a href="#" class="hero__scroll-down">листайте вниз</a>
     </section> <!-- /.hero -->
 
     <section class="section section--dark projects section--dark__projects">
@@ -109,11 +109,11 @@
                     <div class="block">
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Город:</h3>
-                        <span class="swiper-slide__value">Ростов-на-Дону ЖК&nbsp;Адмирал</span>
+                        <span class="swiper-slide__value">Ростов-на-Дону ЖК&nbsp;Чайка</span>
                       </div>
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Площадь:</h3>
-                        <span class="swiper-slide__value">81 м2</span>
+                        <span class="swiper-slide__value">106 м2</span>
                       </div>
                     </div>
                     <!-- /.block -->
@@ -121,7 +121,7 @@
                     <div class="block">
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                        <span class="swiper-slide__value">3,5 месяца</span>
+                        <span class="swiper-slide__value">4,5 месяца</span>
                       </div>
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Стоимость:</h3>
@@ -134,11 +134,11 @@
                     <div class="block">
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Город:</h3>
-                        <span class="swiper-slide__value">Ростов-на-Дону ЖК&nbsp;Адмирал</span>
+                        <span class="swiper-slide__value">Ростов-на-Дону ЖК&nbsp;Парус</span>
                       </div>
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Площадь:</h3>
-                        <span class="swiper-slide__value">81 м2</span>
+                        <span class="swiper-slide__value">63 м2</span>
                       </div>
                     </div>
                     <!-- /.block -->
@@ -146,7 +146,7 @@
                     <div class="block">
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                        <span class="swiper-slide__value">3,5 месяца</span>
+                        <span class="swiper-slide__value">2 месяца</span>
                       </div>
                       <div class="swiper-slide__text">
                         <h3 class="swiper-slide__heading">Стоимость:</h3>
@@ -175,16 +175,16 @@
                 <div class="swiper-wrapper swiper-no-swiping">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                      <img src="img/projects/project.jpg" alt="" class="project__image">
-                      <div class="project__image__adaptive__wrapper"><img src="img/projects/project-small.jpg" alt="" class="project__image__adaptive"></div> 
+                      <img src="img/projects/project-1.jpg" alt="" class="project__image">
+                      <div class="project__image__adaptive__wrapper"><img src="img/projects/project-small-1.jpg" alt="" class="project__image__adaptive"></div> 
                     </div>
                     <div class="swiper-slide">
-                      <img src="img/projects/project.jpg" alt="" class="project__image">
-                      <img src="img/projects/project-small.jpg" alt="" class="project__image__adaptive">
+                      <img src="img/projects/project-2.jpg" alt="" class="project__image">
+                      <img src="img/projects/project-small-2.jpg" alt="" class="project__image__adaptive">
                     </div>
                     <div class="swiper-slide">
-                      <img src="img/projects/project.jpg" alt="" class="project__image">
-                      <img src="img/projects/project-small.jpg" alt="" class="project__image__adaptive">
+                      <img src="img/projects/project-3.jpg" alt="" class="project__image">
+                      <img src="img/projects/project-small-3.jpg" alt="" class="project__image__adaptive">
                     </div>
                 </div>
             </div>
@@ -226,12 +226,10 @@
             <label for="control-user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" autocomplete="off" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
-          <button class="button button--primarу control__button" onclick="ym('56840248', 'reachGoal', 'button-send'); return true;" disabled="disabled">Отправить</button>
+          <button class="button button--primarу control__button" onclick="ym('56840248', 'reachGoal', 'button-send'); return true;" >Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="controlPolicyCheckbox" id="control-policy-checkbox" class="policy__checkbox">
+            <input type="checkbox" name="policyCheckbox" id="control-policy-checkbox" class="policy__checkbox">
             <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
-            <div id="controlPolicyCheckbox-error" class="control-acception">Дайте согласие</div>
-            <div id="control-attention" class="control-attention" data-toggle='control-attention'>Все поля должны быть заполнены</div>
           </div>
           <!-- /.policy -->
         </form>
@@ -678,13 +676,11 @@
           <!-- /.input-group footer__input-group -->
 
           <div class="policy footer__policy">
-            <input type="checkbox" name="footerPolicyCheckbox" id="footer-policy-checkbox" class="policy__checkbox">
+            <input type="checkbox" name="policyCheckbox" id="footer-policy-checkbox" class="policy__checkbox">
             <label for="footer-policy-checkbox" class="policy__label policy__label--light policy__label--center">Я соглашаюсь с обработкой данных</label>
-            <div id="footerPolicyCheckbox-error" class="footer-acception">Дайте согласие</div>
-            <div id="footer-attention" class="footer-attention">Все поля должны быть заполнены</div>
           </div>
           <!-- /.policy -->
-          <button class="button button--primary footer__button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;" disabled="disabled">Отправить</button>
+          <button class="button button--primary footer__button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;" >Отправить</button>
           </form>
           <!-- /.form footer__form -->
       </div>
@@ -692,7 +688,6 @@
       <div class="contacts-wrap footer__contacts-wrap">
         <a id="contacts-section"></a>
         <div class="contacts footer__contacts">Ростов на дону, Торговый центр Plaza Прямой&nbsp;телефон +7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</div>
-        <a id="down"></a>
         <!-- /.contacts -->
         <div class="links contacts-wrap__links">
           <a href="mailto:grifonna8@gmail.com" class="message-background contacts-wrap__message-background"><img src="img/message.png" alt="message-icon" class="message contacts-wrap__message"></a>
@@ -714,8 +709,8 @@
     <div class="footer__menu">
       <div class="container">
         <div class="menu">
-          <a class="home" href="http://grifonna8.ru/project"></a>
-          <div class="logo menu__logo">Repair Design Project</div>
+          <a class="home" href="http://grifonna8.ru/project">
+          <div class="logo menu__logo">Repair Design Project</div></a>
           <nav class="nav menu__nav">
             <a href="#main-section" class="nav__item">Главная</a>
             <a href="#projects-section" class="nav__item">Проекты</a>
@@ -759,13 +754,11 @@
         <!-- /.input-group modal__input-group -->
        
         <div class="policy modal__policy">
-          <input type="checkbox" name="modalPolicyCheckbox" id="modal-policy-checkbox" class="policy__checkbox">
+          <input type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox">
           <label for="modal-policy-checkbox" class="policy__label policy__label--light">Я соглашаюсь с обработкой данных</label>
-          <div id="modalPolicyCheckbox-error" class="modal-acception">Дайте согласие</div>
-          <div id="modal-attention" class="modal-attention">Все поля должны быть заполнены</div>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;" disabled="disabled">Отправить заявку</button>
+        <button class="button button--primary modal__button" onclick="ym(' 56840248', 'reachGoal', 'button-call'); return true;">Отправить заявку</button>
       </form>
       <!-- /.form modal__form -->
     </div>

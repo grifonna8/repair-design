@@ -360,14 +360,15 @@ template {
     background-color: transparent;
     color: #fff; }
   .button--up {
+    opacity: 0;
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     justify-content: space-around;
     position: fixed;
-    right: 20px;
-    bottom: 50px;
+    right: 15px;
+    bottom: 20px;
     height: 1.785rem;
     width: 5.714rem;
     color: #fff;
@@ -376,6 +377,24 @@ template {
     transition: box-shadow 0.3s;
     background-color: #E3B873;
     cursor: pointer; }
+    .button--up--visible {
+      opacity: 1;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      right: 15px;
+      bottom: 20px;
+      height: 1.785rem;
+      width: 5.714rem;
+      color: #fff;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s;
+      background-color: #E3B873;
+      cursor: pointer; }
 
 .label--light {
   color: rgba(255, 255, 255, 0.5);
@@ -556,6 +575,9 @@ input.invalid {
   justify-content: center;
   width: 100%;
   flex-wrap: wrap; }
+
+#policyCheckbox-error {
+  bottom: -1.3rem; }
 
 .container {
   width: 85%;
@@ -801,9 +823,26 @@ img {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-weight: normal; }
   .title--primary {
-    color: #E3B873; }
+    color: #E3B873;
+    white-space: nowrap; }
+
+.button-thanks {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  outline: none;
+  width: 45%;
+  background-color: #E3B873;
+  border-radius: 5%;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.7rem 1.2rem; }
 
 .projects {
   position: relative;
