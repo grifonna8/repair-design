@@ -153,7 +153,7 @@ input
   bottom: -20px
 #footer-user-question-error
   bottom: -20px
-#footerPolicyCheckbox-error
+#footer__policyCheckbox-error
   position: absolute
   color: tomato
   bottom: -20px
@@ -184,7 +184,7 @@ input
     &--visible
       display: initial
       opacity: 1
-#controlPolicyCheckbox-error
+#control__policyCheckbox-error
   position: absolute
   color: tomato
   bottom: -20px
@@ -194,7 +194,7 @@ input
   color: tomato
   bottom: -40px
   margin-left: 255px
-#modalPolicyCheckbox-error
+#modal__policyCheckbox-error
   position: absolute
   color: tomato
   bottom: -20px
@@ -211,5 +211,42 @@ input
   flex-wrap: wrap
 #policyCheckbox-error
   bottom: -1.3rem
+
+.form
+  &__measuring
+    display: flex
+    justify-content: center
+    align-items: center
+.measuring
+  &__dialogue
+    position: relative
+    max-width: 36.36rem
+    background: $dark url('../img/bg-lines-modal.png') no-repeat center
+    padding: 2.357rem 3.5rem 1.928rem 3.5rem
+    color: $light
+  &__title
+    font-family: 'Yeseva One', cursive
+    font-size: 1.428rem
+    text-align: center
+    font-weight: 500
+    margin: 0
+    margin-bottom: 2.428rem
+    line-height: 1.785rem
+    padding: 0 10px 
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    outline: none
+    &-group
+      margin-bottom: 3.428rem
+      display: flex
+      flex-direction: column  
+    &:last-of-type
+      margin-bottom: 1rem
+  &__policy
+    margin-bottom: 2.7rem
+  &__button
+    align-self: flex-end
 
 

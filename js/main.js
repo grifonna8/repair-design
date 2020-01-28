@@ -87,153 +87,197 @@ $(document).ready(function () {
 
   // валидация формы
   //Валидация формы
-  function validateForm(form){
-    $(form).validate({
-      errorClass: "invalid",
-      rules: {
-        // simple rule, converted to {required:true}
-        policyCheckbox: "required",
-        userName: {
-          required: true,
-          minlength: 2,
-          maxlength: 10
-        },
-        userPhone: "required",
-        userQuestion: {
-          required: true,
-          minlength: 20,
-          maxlength: 400
-        },
-        // compound rule
-        userEmail: {
-          required: true,
-          email: true
-        }
-      },
-      errorElement: "div",
-      messages: {
-        userName: {
-          required: "Имя обязательно",
-          minlength: "Имя не короче 2 букв",
-          maxlength: "Имя не длиннее 10 букв"
-        },
-        policyCheckbox: "Подтвердите согласие на обработку данных",
-        userPhone: "Телефон обязателен",
-        userQuestion: {
-          required: "Вопрос обязателен",
-          minlength: "Вопрос слишком короткий",
-          maxlength: "Слишком длинный вопрос"
-        },
-        userEmail: {
-          required: "Обязательно укажите email",
-          email: "Введите в формате name@domain.com"
-        }
-      },
-      errorPlacement: function (error, element) {
-        if (element.attr("type") == "checkbox") {
-            return element.next('label').append(error);
-        }
-        error.insertAfter($(element));
-      },
-    });
-  }
-  validateForm('.modal__form');
-  validateForm('.control__form');
-  validateForm('.footer__form');
-  /* маска для телефона */
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
-//   $('.modal__form').validate({
-//     errorClass: "invalid",
-//     errorElement: "div",
-//     rules: {
-//       // одно строчное правило
-//       policyCheckbox: "required",
-//       userName: {
-//         required: true,
-//         minlength: 2,
-//         maxlength: 15
-//       },
-//       userPhone: "required",
-//       // правила-объект (блок правил)
-//       userEmail: {
-//         required: true,
-//         email: true
-//       },
-// /*       policyCheckbox: {
-//         required: true,
-//       }, */
-//     }, /* сообщения при выводе ошибки */
-//     messages: {
-//       userName: {
-//         required: "Имя обязательно",
-//         minlength: "Имя не короче 2 букв",
-//         maxlength: "Имя не длиннее 15 букв"
-//       },
-//       userPhone: "Телефон обязателен",
-//       userEmail: {
-//         required: "Заполните поле",
-//         email: "Введите корректный email"
-//       }
-//    }
-//   });
-
-//   $('.footer__form').validate({
-//     errorClass: "invalid",
-//     errorElement: "div",
-//     rules: {
-//       // одно строчное правило
-//       userName: {
-//         required: true,
-//         minlength: 2,
-//         maxlength: 15
-//       },
-//       userPhone: "required",
-//       // правила-объект (блок правил)
-//       userEmail: {
-//         required: true,
-//         email: true
-//       }
-//     }, /* сообщения при выводе ошибки */
-//     messages: {
-//       userName: {
-//         required: "Имя обязательно",
-//         minlength: "Имя не короче 2 букв",
-//         maxlength: "Имя не длиннее 15 букв"
-//       },
-//       userPhone: "Телефон обязателен",
-//     }
-//   });
-
-//   $('.control__form').validate({
-//     errorClass: "invalid",
-//     errorElement: "div",
-//     rules: {
-//       // одно строчное правило
-//       policyCheckbox: "required",
-//       userName: {
-//         required: true,
-//         minlength: 2,
-//         maxlength: 15
-//       },
-//       userPhone: "required",
-//       // правила-объект (блок правил)
-//       userEmail: {
-//         required: true,
-//         email: true
-//       }
-//     }, /* сообщения при выводе ошибки */
-//     messages: {
-//       policyCheckbox: "Подтвердите согланисе на обработку данных",
-//       userName: {
-//         required: "Имя обязательно",
-//         minlength: "Имя не короче 2 букв",
-//         maxlength: "Имя не длиннее 15 букв"
-//       },
-//       userPhone: "Телефон обязателен",
-//     }
-//   });
+  // function validateForm(form){
+  //   $(form).validate({
+  //     errorClass: "invalid",
+  //     rules: {
+  //       // simple rule, converted to {required:true}
+  //       policyCheckbox: "required",
+  //       userName: {
+  //         required: true,
+  //         minlength: 2,
+  //         maxlength: 10
+  //       },
+  //       userPhone: "required",
+  //       userQuestion: {
+  //         required: true,
+  //         minlength: 20,
+  //         maxlength: 400
+  //       },
+  //       // compound rule
+  //       userEmail: {
+  //         required: true,
+  //         email: true
+  //       }
+  //     },
+  //     errorElement: "div",
+  //     messages: {
+  //       userName: {
+  //         required: "Имя обязательно",
+  //         minlength: "Имя не короче 2 букв",
+  //         maxlength: "Имя не длиннее 10 букв"
+  //       },
+  //       policyCheckbox: "Подтвердите согласие на обработку данных",
+  //       userPhone: "Телефон обязателен",
+  //       userQuestion: {
+  //         required: "Вопрос обязателен",
+  //         minlength: "Вопрос слишком короткий",
+  //         maxlength: "Слишком длинный вопрос"
+  //       },
+  //       userEmail: {
+  //         required: "Обязательно укажите email",
+  //         email: "Введите в формате name@domain.com"
+  //       }
+  //     },
+  //     errorPlacement: function (error, element) {
+  //       if (element.attr("type") == "checkbox") {
+  //           return element.next('label').append(error);
+  //       }
+  //       error.insertAfter($(element));
+  //     },
+  //   });
+  // }
+  // validateForm('.modal__form');
+  // validateForm('.control__form');
+  // validateForm('.footer__form');
   
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      modal__policyCheckbox: "required",
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        checkMask: true
+      },
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      },
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      modal__policyCheckbox: "Подтвердите согласие на обработку данных",
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Телефон обязателен",
+        checkMask: "Введите полный номер телефона"
+      },
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+   }
+  });
 
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      footer__policyCheckbox: "required",
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        checkMask: true
+      },
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userQuestion: {
+        required: true,
+        minlength: 20,
+        maxlength: 400
+      },
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      footer__policyCheckbox: "Подтвердите согласие на обработку данных",
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Телефон обязателен",
+        checkMask: "Введите полный номер телефона"
+      },
+      userQuestion: {
+        required: "Вопрос обязателен",
+        minlength: "Вопрос слишком короткий",
+        maxlength: "Слишком длинный вопрос"
+      },
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
+    },
+  });
+
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      control__policyCheckbox: "required",
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        checkMask: true
+      },
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      control__policyCheckbox: "Подтвердите согласие на обработку данных",
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Телефон обязателен",
+        checkMask: "Введите полный номер телефона"
+      },
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
+    },
+  });
+  
+  jQuery.validator.addMethod("checkMask", function(value, element) {
+    return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value); 
+  }); 
+  // запускает функцию проверки чекмаск на полноту заполнения
+  $('[type="tel"]').mask('+7(000)000-0000', {placeholder: "Ваш номер телефона:"});
   // $('#control-form').submit(function(e){
   //   e.preventDefault(); /* произвели отключение стандартного события отправки формы через php, теперь она не работает */
   //   $.ajax({
@@ -302,10 +346,10 @@ $(document).ready(function () {
             /* iconImageOffset: [-5, -38],
         }); */
 
-/*     myMap.geoObjects
-        .add(myPlacemark);
-        myMap.behaviors.disable('scrollZoom');
-  }); */
+  //   myMap.geoObjects
+  //       .add(myPlacemark);
+  //       myMap.behaviors.disable('scrollZoom');
+  // });
 
   var player;
   $('.video__play').on('click', function onYouTubeIframeAPIReady() {

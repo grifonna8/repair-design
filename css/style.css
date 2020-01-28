@@ -510,7 +510,7 @@ input.invalid {
 #footer-user-question-error {
   bottom: -20px; }
 
-#footerPolicyCheckbox-error {
+#footer__policyCheckbox-error {
   position: absolute;
   color: tomato;
   bottom: -20px;
@@ -543,7 +543,7 @@ input.invalid {
     display: initial;
     opacity: 1; }
 
-#controlPolicyCheckbox-error {
+#control__policyCheckbox-error {
   position: absolute;
   color: tomato;
   bottom: -20px;
@@ -555,7 +555,7 @@ input.invalid {
   bottom: -40px;
   margin-left: 255px; }
 
-#modalPolicyCheckbox-error {
+#modal__policyCheckbox-error {
   position: absolute;
   color: tomato;
   bottom: -20px; }
@@ -579,6 +579,56 @@ input.invalid {
 #policyCheckbox-error {
   bottom: -1.3rem; }
 
+.form__measuring {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center; }
+
+.measuring__dialogue {
+  position: relative;
+  max-width: 36.36rem;
+  background: #131313 url("../img/bg-lines-modal.png") no-repeat center;
+  padding: 2.357rem 3.5rem 1.928rem 3.5rem;
+  color: #fff; }
+
+.measuring__title {
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.428rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 2.428rem;
+  line-height: 1.785rem;
+  padding: 0 10px; }
+
+.measuring__form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column; }
+
+.measuring__input {
+  outline: none; }
+  .measuring__input-group {
+    margin-bottom: 3.428rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column; }
+  .measuring__input:last-of-type {
+    margin-bottom: 1rem; }
+
+.measuring__policy {
+  margin-bottom: 2.7rem; }
+
+.measuring__button {
+  align-self: flex-end; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -596,6 +646,16 @@ input.invalid {
 
 .col-50 {
   width: 50%; }
+  .col-50--right {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -693,6 +753,8 @@ img {
   align-items: center; }
   .menu__logo {
     text-decoration: none; }
+  .menu__text--upper {
+    margin-bottom: 0; }
 
 .logo {
   color: #E3B873;
@@ -1069,6 +1131,31 @@ img {
     background-color: #E3B873;
     color: #fff;
     padding: 1.214rem 2.8rem; }
+
+.measuring {
+  background: url(../img/measuring/circle.png) left no-repeat; }
+  .measuring__text {
+    font-weight: 500;
+    font-size: 1.285rem; }
+    .measuring__text--first {
+      margin-top: -45px;
+      margin-left: 100px;
+      max-width: 26rem; }
+    .measuring__text--second {
+      margin-top: 80px;
+      margin-left: 165px; }
+    .measuring__text--third {
+      margin-top: 140px;
+      margin-left: 190px; }
+    .measuring__text--fourth {
+      margin-top: 200px;
+      margin-left: 130px; }
+
+.economy {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center; }
 
 .design__section-title {
   margin-bottom: 2.78rem; }
@@ -1540,17 +1627,17 @@ img {
     font-size: 12px; }
   .nav__item {
     margin-right: 1rem; }
-  #controlPolicyCheckbox-error {
+  #control__policyCheckbox-error {
     position: absolute;
     color: tomato;
     bottom: -20px;
-    margin-left: 242px; }
+    margin-left: 218px; }
   #control-attention {
     position: absolute;
     color: tomato;
     bottom: -40px;
     margin-left: 242px; }
-  #footerPolicyCheckbox-error {
+  #footer__policyCheckbox-error {
     position: absolute;
     color: tomato;
     bottom: -20px;
@@ -1774,17 +1861,17 @@ img {
   .policy__label {
     -webkit-box-pack: start;
     justify-content: flex-start; }
-  #controlPolicyCheckbox-error {
+  #control__policyCheckbox-error {
     position: absolute;
     color: tomato;
-    bottom: 15px;
+    bottom: 35px;
     margin-left: 0; }
   #control-attention {
     position: absolute;
     color: tomato;
     bottom: 30px;
     margin-left: 0; }
-  #footerPolicyCheckbox-error {
+  #footer__policyCheckbox-error {
     position: absolute;
     color: tomato;
     bottom: -15px;
