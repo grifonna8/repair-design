@@ -180,6 +180,45 @@ $(document).ready(function () {
    }
   });
 
+  $('.measuring__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // одно строчное правило
+      measuring__policyCheckbox: "required",
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        checkMask: true
+      },
+      // правила-объект (блок правил)
+      userEmail: {
+        required: true,
+        email: true
+      },
+    }, /* сообщения при выводе ошибки */
+    messages: {
+      measuring__policyCheckbox: "Подтвердите согласие на обработку данных",
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Телефон обязателен",
+        checkMask: "Введите полный номер телефона"
+      },
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+   }
+  });
+
   $('.footer__form').validate({
     errorClass: "invalid",
     errorElement: "div",

@@ -431,6 +431,9 @@ template {
 .control__policy {
   position: relative; }
 
+.measuring__policy {
+  position: relative; }
+
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
@@ -438,6 +441,7 @@ template {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
+  position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -564,6 +568,11 @@ input.invalid {
   position: absolute;
   color: tomato;
   bottom: -40px; }
+
+#measuring__policyCheckbox-error {
+  position: absolute;
+  color: tomato;
+  bottom: -20px; }
 
 .home {
   text-decoration: none; }
@@ -1133,12 +1142,11 @@ img {
     padding: 1.214rem 2.8rem; }
 
 .measuring {
-  background: url(../img/measuring/circle.png) left no-repeat; }
+  background: url(../img/measuring/circle.png) left -40px no-repeat; }
   .measuring__text {
     font-weight: 500;
     font-size: 1.285rem; }
     .measuring__text--first {
-      margin-top: -45px;
       margin-left: 100px;
       max-width: 26rem; }
     .measuring__text--second {
@@ -1148,14 +1156,34 @@ img {
       margin-top: 140px;
       margin-left: 190px; }
     .measuring__text--fourth {
-      margin-top: 200px;
-      margin-left: 130px; }
+      margin-top: 145px;
+      margin-left: 130px;
+      max-width: 18.28rem; }
 
 .economy {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 2.714rem; }
+  .economy__image-wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #E3B873;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%; }
+  .economy__text {
+    color: #E3B873;
+    font-weight: 500;
+    font-size: 1.428rem;
+    line-height: 25px;
+    max-width: 22.7rem;
+    margin-left: 26px; }
 
 .design__section-title {
   margin-bottom: 2.78rem; }

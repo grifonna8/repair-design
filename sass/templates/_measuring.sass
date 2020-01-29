@@ -1,10 +1,9 @@
 .measuring
-  background: url(../img/measuring/circle.png) left no-repeat
+  background: url(../img/measuring/circle.png) left -40px no-repeat
   &__text
     font-weight: 500
     font-size: 1.285rem
     &--first
-      margin-top: -45px
       margin-left: 100px
       max-width: 26rem
     &--second
@@ -14,14 +13,26 @@
       margin-top: 140px
       margin-left: 190px
     &--fourth
-      margin-top: 200px
+      margin-top: 145px
       margin-left: 130px
+      max-width: 18.28rem
 .economy
   display: flex
   align-items: center
+  margin-top: 2.714rem
   &__image
     &-wrapper
-      border: 10px solid $main
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $primary
+      width: 72px
+      height: 72px
       border-radius: 50%
-.economy__image-wrapper
-  border: 10px solid $main
+  &__text
+    color: $primary
+    font-weight: 500
+    font-size: 1.428rem
+    line-height: 25px
+    max-width: 22.7rem
+    margin-left: 26px

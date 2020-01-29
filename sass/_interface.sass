@@ -94,6 +94,9 @@
 .control
   &__policy
     position: relative
+.measuring
+  &__policy
+    position: relative
 
 .policy
   &__checkbox
@@ -104,6 +107,7 @@
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem
   &__label
+    position: relative
     display: flex
     align-items: center
     color: $black
@@ -202,6 +206,11 @@ input
   position: absolute
   color: tomato
   bottom: -40px
+#measuring__policyCheckbox-error
+  position: absolute
+  color: tomato
+  bottom: -20px
+
 .home
   text-decoration: none
 .map__wrapper
@@ -248,5 +257,10 @@ input
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
+  // &__section-title
+  //   position: absolute
+  //   display: none
+  //   visibility: hidden
+  //   opacity: 0
 
 
