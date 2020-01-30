@@ -216,7 +216,13 @@ $(document).ready(function () {
         required: "Заполните поле",
         email: "Введите корректный email"
       }
-   }
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
+    },
   });
 
   $('.footer__form').validate({
@@ -438,6 +444,7 @@ $(document).ready(function () {
 
     });
 
+    /* плавная прокрутка навигации */
     $("body").on('click', '[href*="#"]', function(e){
       var fixed_offset = 100;
       $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);

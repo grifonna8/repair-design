@@ -574,6 +574,15 @@ input.invalid {
   color: tomato;
   bottom: -20px; }
 
+#measuring-user-name-error {
+  bottom: -20px; }
+
+#measuring-user-phone-error {
+  bottom: -20px; }
+
+#measuring-user-email-error {
+  bottom: -20px; }
+
 .home {
   text-decoration: none; }
 
@@ -629,14 +638,18 @@ input.invalid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column; }
-  .measuring__input:last-of-type {
-    margin-bottom: 1rem; }
+    .measuring__input-group--last {
+      margin-bottom: 1rem; }
 
 .measuring__policy {
   margin-bottom: 2.7rem; }
 
 .measuring__button {
   align-self: flex-end; }
+
+.measuring__section-title__heading {
+  visibility: hidden;
+  margin-bottom: 5rem; }
 
 .container {
   width: 85%;
@@ -1142,22 +1155,25 @@ img {
     padding: 1.214rem 2.8rem; }
 
 .measuring {
-  background: url(../img/measuring/circle.png) left -40px no-repeat; }
+  background: url(../img/measuring/circle.png) left 80px no-repeat; }
   .measuring__text {
+    position: absolute;
+    margin-top: 5px;
     font-weight: 500;
     font-size: 1.285rem; }
     .measuring__text--first {
-      margin-left: 100px;
+      margin-left: 420px;
+      margin-top: 140px;
       max-width: 26rem; }
     .measuring__text--second {
-      margin-top: 80px;
-      margin-left: 165px; }
+      margin-top: 260px;
+      margin-left: 490px; }
     .measuring__text--third {
-      margin-top: 140px;
-      margin-left: 190px; }
+      margin-top: 420px;
+      margin-left: 510px; }
     .measuring__text--fourth {
-      margin-top: 145px;
-      margin-left: 130px;
+      margin-top: 570px;
+      margin-left: 450px;
       max-width: 18.28rem; }
 
 .economy {
@@ -1650,6 +1666,20 @@ img {
     transform: translateX(-300px); }
   100% { } }
 
+@media screen and (min-width: 1265px) and (max-width: 1440px) {
+  .measuring__text--first {
+    margin-left: 30px;
+    margin-top: 180px; }
+  .measuring__text--second {
+    margin-left: 280px;
+    margin-top: 280px; }
+  .measuring__text--third {
+    margin-left: 260px;
+    margin-top: 440px; }
+  .measuring__text--fourth {
+    margin-left: 120px;
+    margin-top: 590px; } }
+
 @media screen and (max-width: 1264px) {
   html {
     font-size: 12px; }
@@ -1676,7 +1706,21 @@ img {
     bottom: -40px;
     margin-left: 110px; }
   .control__video {
-    height: 395px; } }
+    height: 395px; }
+  .measuring__dialogue {
+    max-width: 32rem; }
+  .measuring__text--first {
+    margin-left: 70px;
+    margin-top: 180px; }
+  .measuring__text--second {
+    margin-left: 310px;
+    margin-top: 280px; }
+  .measuring__text--third {
+    margin-left: 280px;
+    margin-top: 440px; }
+  .measuring__text--fourth {
+    margin-left: 150px;
+    margin-top: 590px; } }
 
 @media screen and (min-width: 992px) and (max-width: 1264px) {
   .card__title--team {
@@ -1701,6 +1745,8 @@ img {
     color: #fff;
     font-size: 1.25rem;
     line-height: 135.84%; }
+  .measuring {
+    display: none; }
   .team {
     background: #131313;
     color: #fff; }

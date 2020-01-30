@@ -210,6 +210,12 @@ input
   position: absolute
   color: tomato
   bottom: -20px
+#measuring-user-name-error
+  bottom: -20px
+#measuring-user-phone-error
+  bottom: -20px
+#measuring-user-email-error
+  bottom: -20px
 
 .home
   text-decoration: none
@@ -251,16 +257,17 @@ input
       margin-bottom: 3.428rem
       display: flex
       flex-direction: column  
-    &:last-of-type
-      margin-bottom: 1rem
+      &--last
+        margin-bottom: 1rem
   &__policy
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
-  // &__section-title
-  //   position: absolute
-  //   display: none
-  //   visibility: hidden
-  //   opacity: 0
+  &__section-title
+    &__heading
+      visibility: hidden
+      margin-bottom: 5rem
+
+
 
 

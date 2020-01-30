@@ -1,3 +1,18 @@
+@media screen and ( min-width: 1265px ) and ( max-width: 1440px )
+  .measuring
+    &__text
+      &--first
+        margin-left: 30px
+        margin-top: 180px
+      &--second
+        margin-left: 280px
+        margin-top: 280px
+      &--third
+        margin-left: 260px
+        margin-top: 440px
+      &--fourth
+        margin-left: 120px
+        margin-top: 590px
 @media screen and ( max-width: 1264px )
   html
     font-size: 12px
@@ -26,7 +41,23 @@
     margin-left: 110px
   .control
     &__video
-      height: 395px  
+      height: 395px
+  .measuring
+    &__dialogue
+      max-width: 32rem
+    &__text
+      &--first
+        margin-left: 70px
+        margin-top: 180px
+      &--second
+        margin-left: 310px
+        margin-top: 280px
+      &--third
+        margin-left: 280px
+        margin-top: 440px
+      &--fourth
+        margin-left: 150px
+        margin-top: 590px
 
 @media screen and ( min-width: 992px ) and ( max-width: 1264px )
   .card
@@ -59,6 +90,8 @@
         color: $light
         font-size: 1.25rem
         line-height: 135.84%
+  .measuring
+    display: none
   .team
     background: $dark
     color: $light
