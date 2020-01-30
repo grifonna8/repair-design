@@ -1956,12 +1956,6 @@ img {
     bottom: -30px;
     margin-left: 0; } }
 
-@media screen and (max-width: 725px) {
-  .control__video {
-    height: 170px;
-    min-height: 0;
-    width: auto; } }
-
 @media screen and (max-width: 570px) {
   .section-title__text {
     font-size: 1.166rem;

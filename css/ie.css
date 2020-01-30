@@ -16,6 +16,13 @@
 .card__pricetag--clients--wrapper {
   padding: 0 0;
 }
+
+@media screen and (min-width: 761px) and (max-width: 1650px) {
+  .video__play {
+    padding-bottom: 120px;
+    height: auto;
+  }
+}
 @media screen and (max-width: 760px) {
   .control__video {
     height: auto;
@@ -54,15 +61,31 @@
   .card__image__adaptive {
     display: inline-block;
   }
-  };
+  .video__play {
+    padding-bottom: 120px;
+    height: auto;
+  }
+  #control-user-name-error {
+    bottom: -51px;
+  }
+  #control-user-phone-error {
+    bottom: -51px;
+  }
+  #control__policyCheckbox-error {
+    bottom: -20px;
+  }
+}
+
 @media screen and (max-width: 570px) {
   .mobile-order-top {
     height: 50%;
   }
   .video__play {
+    padding-bottom: 0;
+    height: 60px;
+    width: 60px;
     padding-top: 0;
-    margin-top: 14%;
-    height: auto;
+    margin-top: 60px;
   }
   .control-attention {
     bottom: -8rem;
@@ -72,5 +95,13 @@
   }
   .types {
     padding-top: 0;
+  }
+  .button--up {
+    right: 30px;
+  }
+  .footer__contacts {
+    max-width: 28rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
