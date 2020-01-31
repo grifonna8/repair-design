@@ -436,13 +436,13 @@ $(document).ready(function () {
   //         $('button[class="modal__button"]').attr('disabled', disable ? true : false);
   //     });
   // });
-    $('.policy__checkbox').change(function(){
+    // $('.policy__checkbox').change(function(){
       
-      if ($('.policy-checkbox').is(':checked')){
-        $('.modal__button').removeAttr('disabled');
-      }
+    //   if ($('.policy-checkbox').is(':checked')){
+    //     $('.modal__button').removeAttr('disabled');
+    //   }
 
-    });
+    // });
 
     /* плавная прокрутка навигации */
     $("body").on('click', '[href*="#"]', function(e){
@@ -450,4 +450,13 @@ $(document).ready(function () {
       $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);
       e.preventDefault();
     });
+
+  $('#open_callback').click(function() { 
+    $("#clever_callback_form_ico").click();
+          $("#cleversite_call").click();
+    }); 
+
+  $('#open_chat').click(function() { 
+    $("#cleversite_chat").click();
+    }); 
 });
