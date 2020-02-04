@@ -425,6 +425,30 @@ $(document).ready(function () {
         };
     });
 
+  var isAddedVidget = false;
+
+    $(window).scroll(function() {
+        var el = $('.projects');
+        if ($(this).scrollTop() > el.offset().top - 800) {
+            if(isAddedVidget) return;
+            isAddedVidget = true;
+            var script = document.createElement('script');
+            script = (function() { 
+              var s = document['createElement']('script');
+              s.type = 'text/javascript'; 
+              s.async = true; 
+              s.charset = 'utf-8';	
+              s.src = '//cleversite.ru/cleversite/widget_new.php?supercode=1&referer_main='+encodeURIComponent(document.referrer)+'&clid=56734yrdBi&siteNew=74080'; 
+              var ss = document['getElementsByTagName']('script')[0]; 
+              if(ss) {
+                ss.parentNode.insertBefore(s, ss);
+              } else {
+                document.documentElement.firstChild.appendChild(s);
+              };
+            })();
+            el.append(script);
+        };
+    });
 
   //   $(function(){
   //     var inp = $('input[name="policyCheckbox"]');
@@ -445,11 +469,11 @@ $(document).ready(function () {
     // });
 
     /* плавная прокрутка навигации */
-    $("body").on('click', '[href*="#"]', function(e){
-      var fixed_offset = 100;
-      $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);
-      e.preventDefault();
-    });
+  $("body").on('click', '[href*="#"]', function(e){
+    var fixed_offset = 100;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);
+    e.preventDefault();
+  });
 
   $('#open_callback').click(function() { 
     $("#clever_callback_form_ico").click();
@@ -459,4 +483,6 @@ $(document).ready(function () {
   $('#open_chat').click(function() { 
     $("#cleversite_chat").click();
     }); 
+
+
 });

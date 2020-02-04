@@ -450,7 +450,6 @@ $(document).ready(function () {
         };
     });
 
-
   //   $(function(){
   //     var inp = $('input[name="policyCheckbox"]');
   //     inp.on('click', function(){
@@ -470,11 +469,11 @@ $(document).ready(function () {
     // });
 
     /* плавная прокрутка навигации */
-    $("body").on('click', '[href*="#"]', function(e){
-      var fixed_offset = 100;
-      $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);
-      e.preventDefault();
-    });
+  $("body").on('click', '[href*="#"]', function(e){
+    var fixed_offset = 100;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1200);
+    e.preventDefault();
+  });
 
   $('#open_callback').click(function() { 
     $("#clever_callback_form_ico").click();
@@ -484,4 +483,6 @@ $(document).ready(function () {
   $('#open_chat').click(function() { 
     $("#cleversite_chat").click();
     }); 
+
+
 });
