@@ -484,5 +484,4 @@ $(document).ready(function () {
     $("#cleversite_chat").click();
     }); 
 
-
 });
